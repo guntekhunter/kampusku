@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", "segoe ui";
+
+}
+h4{
+    font-weight: lighter;
+}
+.tombol{
+    width:10rem;
+    height: 3rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.gap{
+    height:1rem;
+}
+/* headernya */
+header{
+    width:100%;
+    height: 8vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav{
+    width:80%;
+    height: 5vh;
+    justify-content: space-between;
+    align-items: center;
+    display:flex;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin-left: 2rem;
+}
+
+/* section satu */
+section.satu{
+    background: blue;
+    width:100%;
+    height:60vh;
+    display: flex;
+    justify-content: space-around;
+    
+}
+div.cover{
+    display: flex;
+    align-items: center;
+    width:80%;
+    height:100%;
+    background: yellow;
+    justify-content: space-between;
+    
+
+}
+.text1{
+    justify-content: space-between;
+    display: block;
+}
+.gabung-tombol{
+    background: green;
+    width:100%;
+    justify-content: space-between;
+    display: flex;
+}
+.tombol-satu{
+    background:#FD9388;
+    color:#FEFAFE;
+}
+.tombol-dua{
+    border: .1rem solid #242734;
+}
+.image1{
+    background: blue;
+    width: 50%;
+    height:100%;
+}
+img{
+    width:100%;
+    height:100%;
+}
+
+/* section dua */
+section.dua{
+    background: lightcoral;
+    width:100%;
+    height:60vh;
+}
+section.tiga{
+    background: rgb(0, 255, 55);
+    width:100%;
+    height:60vh;
+}
+section.empat{
+    background: rgb(255, 0, 255);
+    width:100%;
+    height:60vh;
+}

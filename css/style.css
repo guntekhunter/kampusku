@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: yellow;
+    width:100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav{
+    background: red;
+    width:80%;
+    height: 5vh;
+}
+section.satu{
+    background: blue;
+    width:100%;
+    height:60vh;
+}
+section.dua{
+    background: lightcoral;
+    width:100%;
+    height:60vh;
+}
+section.tiga{
+    background: rgb(0, 255, 55);
+    width:100%;
+    height:60vh;
+}
+section.empat{
+    background: rgb(255, 0, 255);
+    width:100%;
+    height:60vh;
+}
