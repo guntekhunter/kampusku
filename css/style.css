@@ -6,16 +6,16 @@
 
 }
 h1.h1{
-    font-size: 3em!important;
+    font-size: 3em;
 }
 h1.judul-satu{
-    font-size: 3em!important;
+    font-size: 3em;
 }
 h4{
-    font-weight: lighter!important;
+    font-weight: lighter;
 }
 h3{
-    font-weight: lighter!important;
+    font-weight: lighter;
 
 }
 .klik{
@@ -64,9 +64,28 @@ nav ul li{
     line-height: 2rem;
 }
 nav ul li a{
+    position: relative;
     color: #242734;
     text-decoration: none;
     display: block;
+}
+nav ul li a::after{
+    content: "";
+    position:absolute;
+    background: #FD9388;
+    height: .2rem;
+    width:0%;
+    left: 0;
+    bottom: 0;
+    transition: 0.1s;
+    
+}
+nav ul li a:hover{
+    color: black;
+}
+nav ul li a:hover:after{
+    width:100%;
+
 }
 
 

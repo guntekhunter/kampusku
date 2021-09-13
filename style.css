@@ -1,21 +1,22 @@
-*{
+*,*::after,*::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "poppins", "segoe ui";
 
 }
+
 h1.h1{
-    font-size: 3em!important;
+    font-size: 3em;
 }
 h1.judul-satu{
-    font-size: 3em!important;
+    font-size: 3em;
 }
 h4{
-    font-weight: lighter!important;
+    font-weight: lighter;
 }
 h3{
-    font-weight: lighter!important;
+    font-weight: lighter;
 
 }
 .klik{
@@ -51,23 +52,34 @@ header{
 nav{
     width:70%;
     height: 5vh;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     display:flex;
 }
 nav ul{
     display: flex;
     list-style: none;
+    background: black;
+    
 }
 nav ul li{
-    margin-left: 2rem;
     line-height: 2rem;
 }
 nav ul li a{
+    position: relative;
     color: #242734;
     text-decoration: none;
     display: block;
+    
 }
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    background: #FD9388;
+    height: 10rem;
+    
+}
+
 
 
 /* section satu */
