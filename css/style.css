@@ -5,6 +5,9 @@
     font-family: "poppins", "segoe ui";
 
 }
+body{
+    overflow: scroll;
+}
 h1.h1{
     font-size: 3em;
 }
@@ -32,6 +35,12 @@ h3{
 }
 .gap{
     height:1rem;
+}
+.aktif{
+    position: relative;
+    color: #FD9388;
+    text-decoration: none;
+    display: block;
 }
 /* headernya */
 header{
@@ -90,7 +99,7 @@ nav ul li a:hover:after{
 
 
 /* section satu */
-section.satu{
+.home section.satu{
     background: #242734;
     width:100%;
     height:80vh;
@@ -105,7 +114,6 @@ div.cover{
     height:100%;
     justify-content: space-between;
     
-
 }
 .text1{
     width:50%;
@@ -135,7 +143,7 @@ img{
 }
 
 /* section dua */
-section.dua{
+.home section.dua{
     width:100%;
     height:70vh;
     display: flex;
@@ -167,7 +175,7 @@ div.text2{
     font-size: 2rem;
 }
 /* section tiga */
-section.tiga{
+.home section.tiga{
     width:100%;
     height:60vh;
     display: flex;
@@ -202,7 +210,7 @@ div.text3{
 .judul3{
     font-size: 2rem;
 }
-section.empat{
+.home section.empat{
     width:100%;
     height:100vh;
     display: flex;
