@@ -1,6 +1,6 @@
 /* section 1 */
 .putih{
-    color: #707070;
+    color: #FEFAFE;
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -85,8 +85,13 @@ section.tiga{
     width: 100%;
     margin: 1rem 0rem;
 }
-.tiga .container{
-    padding: 2rem 0rem;
+.tiga div.container{
+    padding: 2rem 2rem;
     border: 1px solid rgba(0, 0, 0, 0.205);
     border-radius: .3rem;
+}
+.cardnya{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
