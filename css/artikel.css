@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-around;
 }
-.artikel section.satu{
+section.dark-header{
     background: #242734;
     height: 40vh;
     width: 100%;
@@ -50,6 +50,11 @@
     padding: 1rem 0rem;
     justify-content: center;
     display: flex;
+}
+.card:hover{
+    transform: scale(1.01);
+    box-shadow: .2px .2px 4px rgba(0, 0, 0, 0.205);
+    transition-duration: .2s;
 }
 .card-container{
     display: block;

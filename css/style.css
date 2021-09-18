@@ -130,6 +130,11 @@ div.cover{
     color: #FEFAFE;
     border: .1rem solid #FEFAFE;
 }
+.tombol-tiga{
+    background:#242734;
+    color:#FEFAFE;
+    margin-right: 2rem;
+}
 .image1{
     width: 50%;
     height:auto;
@@ -175,6 +180,7 @@ div.text2{
 .home section.tiga{
     width:100%;
     height:60vh;
+    background: #FD9388;
     display: flex;
     justify-content: space-around;
     
@@ -201,7 +207,7 @@ img.gambar3{
 }
 div.text3{
     width:60%;
-    color:#242734;
+    color: #FEFAFE;
     align-items: center;
 }
 .judul3{
