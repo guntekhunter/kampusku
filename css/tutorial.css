@@ -1,7 +1,7 @@
 /* section satu */
 .tutorial section.dua{
-    background: red;
-    height: 60vh;
+    position: relative;
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -9,24 +9,34 @@
     
 }
 .card-wrapper{
-    background: yellow;
     width: 100%;
     height: 100%;
-    justify-content: space-around;
     padding: 2rem 0rem;
 }
+.card-container-tutorial{
+    justify-content: space-between;
+    display: flex;
+    margin-top: 2rem;
+}
 .tutorial .card{
-    background: green;
+    background: #F29191;
     display: block;
-    height: 100%;    
+    height: auto;    
+    width: 20%;
 }
 .card-image{
     padding:1rem;
 }
+
+/* section 3 */
 .tutorial section.tiga{
-    background: yellow;
     height: 60vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
+}
+.tutorial .tiga ul{
+    margin-left:1rem;
+    
+    text-decoration: none;
 }

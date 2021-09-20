@@ -16,6 +16,11 @@ section.dark-header{
     width: 70%;
     height: 100%;
     justify-content: space-around;
+}
+.container-header{
+    width: 70%;
+    height: 100%;
+    justify-content: space-around;
     display: flex;
 }
 /* section 2 */
@@ -23,7 +28,10 @@ section.dark-header{
     display: block;
 
 }
-.header{
+.container-artikel{
+    display: flex;
+}
+.header-page{
     margin-top:10rem;
     margin: auto;
     justify-content: space-around;
@@ -31,22 +39,23 @@ section.dark-header{
 }
 /* section dua */
 .artikel section.dua{
+    position: relative;
     justify-content: space-around;
     display: flex;
-    height:60vh;
+    height:auto;
     width: 100%;
     margin: 1rem 0rem;
 }
 .card-artikel{
     display: flex;
-    height: 90%;
+    height: auto;
     justify-content: space-between;
 }
 .card{
     text-align: center;
     font-weight: bold;
     width: 30%;
-    height:80%;
+    height:auto;
     padding: 1rem 0rem;
     justify-content: center;
     display: flex;
@@ -64,10 +73,15 @@ section.dark-header{
     left: 0;
 }
 .card-container img{
-    width: auto;
+    position: relative;
+    width: 100%;
     margin-top:1rem;
-    height: 80%;
+    height: auto;
     padding: 1em;
+}
+.header{
+    height: auto;
+    margin-top: 2rem;
 }
 .card.cerita{
     background: #D5D5D5;
