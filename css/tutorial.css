@@ -22,7 +22,7 @@
     background: #F29191;
     display: block;
     height: auto;    
-    width: 20%;
+    width: 23%;
 }
 .card-image{
     padding:1rem;
@@ -37,6 +37,12 @@
 }
 .tutorial .tiga ul{
     margin-left:1rem;
-    
+}
+.tutorial .tiga ul li a{
     text-decoration: none;
+    color: #242734;
+    
+}
+.tutorial .tiga ul li a:hover{
+    color: #F29191;;    
 }
