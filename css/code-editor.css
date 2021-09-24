@@ -1,0 +1,42 @@
+.editor-menu{
+    background:red;
+    padding:0;
+    display:flex;
+    height: 3rem;
+    background: #616161;
+}
+.editor-menu button{
+    border:none;
+    cursor:pointer;
+    height: auto;
+    margin:0;
+    padding: .5rem 1rem;
+    color:#FEFAFE;
+    background:#FD9388;
+}
+.editor-menu button:hover{
+    background: #fd6959;
+}
+.container-code{
+    background:#000;
+    display:block;
+    width:100%;
+    bottom: 0;
+    height: 100vh;
+    display: flex;
+}
+.kiri{
+    height: auto;
+    background: #282C34;
+    width: 50%;
+}
+.kanan{
+    width: 50%;
+    height: auto;
+    background: #000000;
+}
+.bar{
+    width: .5rem;
+    background: #616161;
+    cursor: w-resize;
+}
