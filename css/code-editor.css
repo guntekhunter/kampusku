@@ -1,9 +1,9 @@
 .editor-menu{
-    background:red;
     padding:0;
     display:flex;
     height: 3rem;
-    background: #616161;
+    background: #c4c4c4;
+    border: none;
 }
 .editor-menu button{
     border:none;
@@ -18,7 +18,6 @@
     background: #fd6959;
 }
 .container-code{
-    background:#000;
     display:block;
     width:100%;
     bottom: 0;
@@ -27,16 +26,20 @@
 }
 .kiri{
     height: auto;
-    background: #282C34;
+    background: #ffffff;
     width: 50%;
 }
 .kanan{
+    flex: 1;
     width: 50%;
     height: auto;
-    background: #000000;
 }
 .bar{
     width: .5rem;
-    background: #616161;
+    background: #c4c4c4;
     cursor: w-resize;
+}
+iframe{
+    color:red;
+    color:white;
 }
