@@ -20,7 +20,6 @@ bar.addEventListener("mouseup", () => {
 })
 // tombol run
 run.addEventListener("click", () => {
-    console.log("ommaleka");
     const html = editor.textContent;
     iframe.style.color = ("white");
     iframe.src = "data:text/html;charset=utf-8," + encodeURI
