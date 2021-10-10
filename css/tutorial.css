@@ -13,16 +13,18 @@
     height: 100%;
     padding: 2rem 0rem;
 }
-.card-container-tutorial{
+.row{
     justify-content: space-between;
+    flex-flow: wrap;
     display: flex;
-    margin-top: 2rem;
+    flex-direction: row;
 }
 .tutorial .card{
     background: #F29191;
     display: block;
     height: auto;    
     width: 23%;
+    margin-top: 2rem;
 }
 .card-image{
     padding:1rem;

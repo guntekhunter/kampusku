@@ -1,43 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/artikel.css">
-    <link rel="stylesheet" href="../css/tutorial.css">
-    <title>Tutorial</title>
-</head>
-
-<body class="tutorial">
-    <header>
-        <nav>
-            <h1 style="cursor:context-menu">KampusKu</h1>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./artikel.html">Artikel</a></li>
-                <li><a href="#" class="aktif">Tutorial</a></li>
-                <li><a href="./codeEditor.html">Code editor</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="dark-header">
-        <div class="container container-artikel">
-            <div class="header-page">
-                <h1 class="putih">Tutorial</h1>
-                <h3 class="putih">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam cum id dolorum natus
-                    molestias qui.
-                </h3>
-            </div>
-        </div>
-    </section>
+<?php include("../template/header.php") ?>
+<section class="tutorial">
+    <?php include("../template/black-header.php") ?>
     <section class="dua">
         <div class="container">
             <div class="card-wrapper">
                 <h1>Bahasa pemrograman</h1>
-                <div class="card-container-tutorial">
+                <div class="row">
+                    <?php include("../template/bhs-program.php") ?>
+                    <div class="card">
+                        <div class="card-text">
+                            <h3>HTML</h3>
+                        </div>
+                        <div class="card-image">
+                            <img src="../image/artikel page/Image 9.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-text">
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="card-image">
+                            <img src="../image/artikel page/Image 9.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-text">
+                            <h3>javaScript</h3>
+                        </div>
+                        <div class="card-image">
+                            <img src="../image/artikel page/Image 9.png" alt="">
+                        </div>
+                    </div>
+
                     <div class="card">
                         <div class="card-text">
                             <h3>Python</h3>
@@ -69,46 +63,10 @@
                         <div class="card-image">
                             <img src="../image/artikel page/Image 9.png" alt="">
                         </div>
-                    </div>
 
-                </div>
-                <div class="card-container-tutorial">
-                    <div class="card">
-                        <div class="card-text">
-                            <h3>Python</h3>
-                        </div>
-                        <div class="card-image">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
                     </div>
-                    <div class="card">
-                        <div class="card-text">
-                            <h3>HTML</h3>
-                        </div>
-                        <div class="card-image">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-text">
-                            <h3>CSS</h3>
-                        </div>
-                        <div class="card-image">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-text">
-                            <h3>javaScript</h3>
-                        </div>
-                        <div class="card-image">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                    </div>
-
                 </div>
             </div>
-        </div>
     </section>
     <section class="tiga">
         <div class="container header">
@@ -165,6 +123,7 @@
             </ul>
         </div>
     </section>
+</section>
 
 </body>
 
