@@ -1,7 +1,7 @@
 <?php include("../template/header.php") ?>
 <section class="artikel">
 
-<?php include("../template/black-header.php") ?>
+    <?php include("../template/black-header.php") ?>
     <section class="dua">
         <div class="container container-card">
             <div class="gap"></div>
@@ -9,24 +9,24 @@
             <div class="gap"></div>
             <div class="gap"></div>
             <div class="card-artikel">
-                <div class="card cerita">
+                <a href="../halaman/cerita.php" class="card cerita">
                     <div class="card-container">
                         <h4>Cerita</h4>
                         <img src="../image/home page/3.png" alt="">
                     </div>
-                </div>
-                <div class="card materi">
+                </a>
+                <a href="../halaman/cerita.php" class="card materi">
                     <div class="card-container">
                         <h4>Materi</h4>
                         <img src="../image/home page/3.png" alt="">
                     </div>
-                </div>
-                <div class="card konspirasi">
+                </a>
+                <a href="../halaman/cerita.php" class="card konspirasi">
                     <div class="card-container">
                         <h4>Konspirasi</h4>
                         <img src="../image/home page/3.png" alt="">
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -36,47 +36,9 @@
             <div class="gap"> </div>
             <div class="container-cardnya">
                 <div class="cardnya">
-                    <div class="card-container-satu card-containernya">
-                        <div class="image-container">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                        <div class="text-container">
-                            <h3>Artikel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h4>
-                        </div>
-
-                    </div>
-                    <div class="card-container-dua card-containernya">
-                        <div class="image-container">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                        <div class="text-container">
-                            <h3>Artikel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="gap"></div>
-                <div class="cardnya">
-                    <div class="card-container-satu card-containernya">
-                        <div class="image-container">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                        <div class="text-container">
-                            <h3>Artikel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h4>
-                        </div>
-
-                    </div>
-                    <div class="card-container-dua card-containernya">
-                        <div class="image-container">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                        <div class="text-container">
-                            <h3>Artikel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                        </div>
-                    </div>
+                    <?php include("../template/sub-artikel.php") ?>
+                    <?php include("../template/sub-artikel.php") ?>
+                    <?php include("../template/sub-artikel.php") ?>
                 </div>
             </div>
         </div>

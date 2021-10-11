@@ -7,64 +7,13 @@
                 <h1>Bahasa pemrograman</h1>
                 <div class="row">
                     <?php include("../template/bhs-program.php") ?>
-                    <div class="card">
-                        <div class="card-text">
-                            <h3>HTML</h3>
-                        </div>
-                        <div class="card-image">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-text">
-                            <h3>CSS</h3>
-                        </div>
-                        <div class="card-image">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-text">
-                            <h3>javaScript</h3>
-                        </div>
-                        <div class="card-image">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-text">
-                            <h3>Python</h3>
-                        </div>
-                        <div class="card-image">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-text">
-                            <h3>HTML</h3>
-                        </div>
-                        <div class="card-image">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-text">
-                            <h3>CSS</h3>
-                        </div>
-                        <div class="card-image">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-text">
-                            <h3>javaScript</h3>
-                        </div>
-                        <div class="card-image">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-
-                    </div>
+                    <?php include("../template/bhs-program.php") ?>
+                    <?php include("../template/bhs-program.php") ?>
+                    <?php include("../template/bhs-program.php") ?>
+                    <?php include("../template/bhs-program.php") ?>
+                    <?php include("../template/bhs-program.php") ?>
+                    <?php include("../template/bhs-program.php") ?>
+                    <?php include("../template/bhs-program.php") ?>
                 </div>
             </div>
     </section>

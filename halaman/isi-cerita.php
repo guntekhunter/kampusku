@@ -1,35 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/artikel.css">
-    <link rel="stylesheet" href="../css/isi-cerita.css">
-    <link rel="stylesheet" href="../css/tutorial.css">
-    <title>Document</title>
-</head>
-
-<body class="isi-cerita">
-    <header>
-        <nav>
-            <h1 style="cursor:context-menu">KampusKu</h1>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="#" class="aktif">Artikel</a></li>
-                <li><a href="./tutorial.html">Tutorial</a></li>
-                <li><a href="./codeEditor.html">Code editor</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php include("../template/header.php") ?>
+<section class="isi-cerita">
     <section class="satu">
         <div class="container-section-satu">
             <div class="left">
-                <h1>Suatu hari dibulan juni</h1>
+                <h1 class="judul-artikel">Suatu hari dibulan juni</h1>
                 <div class="gap"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, dolorem! Ad, accusamus autem soluta
+                <p class="isi-artikel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, dolorem! Ad, accusamus autem soluta
                     corporis perspiciatis quibusdam illum animi assumenda hic dolorum voluptatem, deleniti distinctio
                     totam? Quibusdam autem deserunt, praesentium odio saepe rerum illo totam aliquam sit ex, optio qui!
                     Aperiam quae reprehenderit fugit non deleniti provident, exercitationem laboriosam necessitatibus
@@ -48,30 +24,11 @@
             </div>
             <div class="right">
                 <h3>Cerita Lain</h3>
-                <div class="garis"></div>
-                <div class="container-lain">
-                    <div class="text-container">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        <p class="tanggal">taggal upload</p>
-                    </div>
-                    <div class="image-container">
-                        <img src="../image/artikel page/Image 9.png" alt="">
-                    </div>
-
-                </div>
-                <div class="garis"></div>
-                <div class="container-lain">
-                    <div class="text-container">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        <p class="tanggal">taggal upload</p>
-                    </div>
-                    <div class="image-container">
-                        <img src="../image/artikel page/Image 9.png" alt="">
-                    </div>
-
-                </div>
-
-
+                <?php include("../template/sub-sub-artikel.php") ?>
+                <?php include("../template/sub-sub-artikel.php") ?>
+                <?php include("../template/sub-sub-artikel.php") ?>
+                <div class="gap"></div>
+                <h5><a href=""> More..</a></h5>
             </div>
         </div>
     </section>
@@ -81,52 +38,14 @@
             <div class="gap"> </div>
             <div class="container-cardnya">
                 <div class="cardnya">
-                    <div class="card-container-satu card-containernya">
-                        <div class="image-container">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                        <div class="text-container">
-                            <h3>Artikel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h4>
-                        </div>
-
-                    </div>
-                    <div class="card-container-dua card-containernya">
-                        <div class="image-container">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                        <div class="text-container">
-                            <h3>Artikel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="gap"></div>
-                <div class="cardnya">
-                    <div class="card-container-satu card-containernya">
-                        <div class="image-container">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                        <div class="text-container">
-                            <h3>Artikel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. </h4>
-                        </div>
-
-                    </div>
-                    <div class="card-container-dua card-containernya">
-                        <div class="image-container">
-                            <img src="../image/artikel page/Image 9.png" alt="">
-                        </div>
-                        <div class="text-container">
-                            <h3>Artikel</h3>
-                            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                        </div>
-                    </div>
+                    <?php include("../template/sub-artikel.php") ?>
+                    <?php include("../template/sub-artikel.php") ?>
+                    <?php include("../template/sub-artikel.php") ?>
                 </div>
             </div>
-        </div>
     </section>
+    </div>
 
-</body>
+    </body>
 
-</html>
+    </html>
