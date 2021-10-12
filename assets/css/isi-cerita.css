@@ -1,0 +1,78 @@
+.garis{
+    width:100%;
+    height: .1px;
+    background: rgba(0, 0, 0, 0.205);
+    margin: 1rem 0rem;
+}
+.isi-cerita section.satu{
+    padding-top: 5%;
+    justify-content:space-around;
+    display:flex;
+}
+.isi-cerita section.satu .container-section-satu{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.isi-cerita section.satu .container-section-satu .left{
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    border-radius: .3rem;
+    width: 70%;
+}
+.isi-cerita section.satu .container-section-satu .right{
+    width: 28%;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    border-radius: .3rem;
+}
+
+
+.isi-cerita section.satu .container-section-satu .left p{
+    font-weight: lighter;
+}
+.isi-cerita section.satu .container-section-satu .right h3{
+    font-weight: bold;
+}
+.isi-cerita section.satu .container-section-satu .right p{
+    font-weight: bold;
+    font-size: .8rem;
+    
+}
+.isi-cerita section.satu .container-section-satu .right p.tanggal{
+    font-weight: lighter;
+    font-size: .5rem;
+    
+}
+.isi-cerita section.satu .container-section-satu .right .container-lain{
+    justify-content: space-between;
+    display: flex;
+}
+.isi-cerita section.satu .container-section-satu .right .container-lain:hover{
+    color: #FD9388;
+}
+.isi-cerita section.satu .container-section-satu .right .container-lain .text-container{
+    width: 75%;
+}
+.isi-cerita section.satu .container-section-satu .right .container-lain .image-container{
+    width: 30%;
+}
+/* section 2 */
+.isi-cerita section.dua{
+    justify-content: space-around;
+    display: flex;
+}
+.isi-cerita section.dua .container{
+    margin-top: 3rem;
+    width: 70%;
+}
+
+/* section3 */
+.isi-cerita section.tiga{
+    justify-content: space-around;
+    position: relative;
+    display: flex;
+    height:70vh;
+    width: 100%;
+    margin: 1rem 0rem;
+}
