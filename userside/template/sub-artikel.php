@@ -1,7 +1,7 @@
 <?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel");
 ?>
 <?php while ($result = mysqli_fetch_array($sql1)) : ?>
-    <a href="../halaman/isi-cerita.php" class="card-containernya" type="submit">
+    <a href="../halaman/isi-cerita.php?id=<?= $result['id']; ?>" class="card-containernya" name="ommaleka">
         <div class="image-container">
             <img src="../image/artikel page/Image 9.png" alt="">
         </div>

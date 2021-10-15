@@ -9,7 +9,8 @@ include("../template/header.php")
     <section class="satu">
         <div class="container-section-satu">
             <div class="left">
-                <h1 class="judul-artikel"><?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel");
+                <?php $id = $_GET['id']; ?>
+                <h1 class="judul-artikel"><?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel WHERE artikel.id = $id");
                                             $p = mysqli_fetch_array($sql1);
                                             $judul = $p['judul'];
                                             echo $judul; ?></h1>
