@@ -1,4 +1,5 @@
 <?php include("../template/header.php") ?>
+<?php include "../conf/koneksi.php"; ?>
 <section class="artikel">
 
     <?php include("../template/black-header.php") ?>
@@ -36,8 +37,6 @@
             <div class="gap"> </div>
             <div class="container-cardnya">
                 <div class="cardnya">
-                    <?php include("../template/sub-artikel.php") ?>
-                    <?php include("../template/sub-artikel.php") ?>
                     <?php include("../template/sub-artikel.php") ?>
                 </div>
             </div>

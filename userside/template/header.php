@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/isi-cerita.css">
     <link rel="stylesheet" href="../css/tutorial.css">
     <link rel="stylesheet" href="../css/code-editor.css">
+    <? include "../conf/koneksi.php"; ?>
     <title>Kampusku</title>
 </head>
 

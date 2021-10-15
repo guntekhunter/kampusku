@@ -9,14 +9,12 @@ include("../template/header.php")
     <section class="satu">
         <div class="container-section-satu">
             <div class="left">
-                <h1 class="judul-artikel"><?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel WHERE id = '1'");
-                                            $j = mysqli_fetch_array($sql1);
-                                            $judul = $j['judul'];
+                <h1 class="judul-artikel"><?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel");
+                                            $p = mysqli_fetch_array($sql1);
+                                            $judul = $p['judul'];
                                             echo $judul; ?></h1>
                 <div class="gap"></div>
-                <p class="isi-artikel"><?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel WHERE id = '1'");
-                                        $i = mysqli_fetch_array($sql1);
-                                        $isi = $i['isi'];
+                <p class="isi-artikel"><?php $isi = $p['isi'];
                                         echo $isi; ?></p>
             </div>
             <div class="right">
@@ -42,9 +40,7 @@ include("../template/header.php")
             <div class="gap"> </div>
             <div class="container-cardnya">
                 <div class="cardnya">
-                    <?php include("../template/sub-artikel.php") ?>
-                    <?php include("../template/sub-artikel.php") ?>
-                    <?php include("../template/sub-artikel.php") ?>
+                    <?php include("../template/sub-artikel.php"); ?>
                 </div>
             </div>
         </div>
