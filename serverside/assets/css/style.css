@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", "segoe ui";
+
+}
+h1.h1{
+    font-size: 3em;
+}
+h1.judul-satu{
+    font-size: 3em;
+}
+h4{
+    font-weight: lighter;
+}
+h3{
+    font-weight: lighter;
+
+}
+.klik{
+    text-decoration:none;
+}
+.tombol{
+    width:10rem;
+    height: 3rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.gap{
+    height:1rem;
+}
+.aktif{
+    position: relative;
+    color: #FD9388;
+    text-decoration: none;
+    display: block;
+}
+/* headernya */
+header{
+    position: fixed;
+    width:100%;
+    height: 8vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow:2px 5px 8px #88888833;
+    z-index: 100;
+    
+    
+}
+
+nav{
+    width:70%;
+    height: 5vh;
+    justify-content: space-between;
+    align-items: center;
+    display:flex;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin-left: 2rem;
+    line-height: 2rem;
+}
+nav ul li a{
+    position: relative;
+    color: #242734;
+    text-decoration: none;
+    display: block;
+}
+nav ul li a::after{
+    content: "";
+    position:absolute;
+    background: #FD9388;
+    height: .2rem;
+    width:0%;
+    left: 0;
+    bottom: 0;
+    transition: 0.1s;
+    
+}
+nav ul li a:hover{
+    color: black;
+}
+nav ul li a:hover:after{
+    width:100%;
+
+}
+
+
+/* section satu */
+.home section.satu{
+    background: #242734;
+    width:100%;
+    height:80vh;
+    display: flex;
+    justify-content: space-around;
+    
+}
+div.cover{
+    display: flex;
+    align-items: center;
+    width:70%;
+    height:100%;
+    justify-content: space-between;
+    
+}
+.text1{
+    width:50%;
+    color: #FEFAFE;
+    display: block;
+}
+.gabung-tombol{
+    width:100%;
+    display: flex;
+}
+.tombol-satu{
+    background:#FD9388;
+    color:#FEFAFE;
+    margin-right: 2rem;
+}
+.tombol-dua{
+    color: #FEFAFE;
+    border: .1rem solid #FEFAFE;
+}
+.tombol-tiga{
+    background:#242734;
+    color:#FEFAFE;
+    margin-right: 2rem;
+}
+.image1{
+    width: 50%;
+    height:auto;
+}
+img{
+    width:100%;
+    height:100%;
+}
+
+/* section dua */
+.home section.dua{
+    width:100%;
+    height:70vh;
+    display: flex;
+    justify-content: space-around;
+}
+div.cover2{
+    align-items: center;
+    height: 100%;
+    width:70%;
+    display: flex;
+
+}
+div.image2{
+    height: 100%;
+    width: 50%;
+    padding: 2rem 0rem;
+}
+img.gambar2{
+    width:auto;
+    height:100%;
+
+}
+div.text2{
+    width:60%;
+    color:#242734;
+    align-items: center;
+}
+.judul2{
+    font-size: 2rem;
+}
+/* section tiga */
+.home section.tiga{
+    width:100%;
+    height:60vh;
+    background: #FD9388;
+    display: flex;
+    justify-content: space-around;
+    
+}
+div.cover3{
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width:70%;
+    display: flex;
+
+}
+div.image3{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    padding: 2rem 0rem;
+}
+img.gambar3{
+    width:auto;
+    height:100%;
+
+}
+div.text3{
+    width:60%;
+    color: #FEFAFE;
+    align-items: center;
+}
+.judul3{
+    font-size: 2rem;
+}
+.home section.empat{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.cover4{
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width:70%;
+    display: flex;
+
+}
+div.image4{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    padding: 2rem 0rem;
+}
+img.gambar4{
+    width:auto;
+    height:100%;
+
+}
+div.text4{
+    width:60%;
+    color:#242734;
+    align-items: center;
+}
+.judul4{
+    font-size: 2rem;
+}

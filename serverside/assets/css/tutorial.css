@@ -1,0 +1,50 @@
+/* section satu */
+.tutorial section.dua{
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+.card-wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0rem;
+}
+.row{
+    justify-content: space-between;
+    flex-flow: wrap;
+    display: flex;
+    flex-direction: row;
+}
+.tutorial .card{
+    background: #F29191;
+    display: block;
+    height: auto;    
+    width: 23%;
+    margin-top: 2rem;
+}
+.card-image{
+    padding:1rem;
+}
+
+/* section 3 */
+.tutorial section.tiga{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.tutorial .tiga ul{
+    margin-left:1rem;
+}
+.tutorial .tiga ul li a{
+    text-decoration: none;
+    color: #242734;
+    
+}
+.tutorial .tiga ul li a:hover{
+    color: #F29191;;    
+}
