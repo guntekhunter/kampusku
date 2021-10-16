@@ -248,3 +248,16 @@ div.text4{
 .judul4{
     font-size: 2rem;
 }
+
+/* footernya */
+
+section .row{
+
+    display: flex;
+    justify-content: space-around;
+}
+section .row .container{
+
+    display: flex;
+    justify-content: space-around;
+}

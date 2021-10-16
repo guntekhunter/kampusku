@@ -1,3 +1,4 @@
+<?php $current_page = 'artikel'; ?>
 <?php include("../template/header.php") ?>
 <?php include "../conf/koneksi.php"; ?>
 <section class="artikel">
@@ -37,14 +38,33 @@
             <div class="gap"> </div>
             <div class="container-cardnya">
                 <div class="cardnya">
-                    <?php include("../template/sub-artikel.php") ?>
+                    <?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel ORDER BY artikel.id DESC ");
+                    ?>
+                    <?php while ($result = mysqli_fetch_array($sql1)) : ?>
+                        <a href="../halaman/isi-cerita.php?id=<?= $result['id']; ?>" class="card-containernya" name="ommaleka">
+                            <div class="image-container">
+                                <img src="../image/artikel page/Image 9.png" alt="">
+                            </div>
+                            <div class="text-container">
+                                <h3><?php echo $result['judul']; ?></h3>
+                                <h4><?php $coba = $result['isi'];
+                                    $i = strip_tags($coba);
+                                    if (strlen($i) > 5) :
+                                        $stringCut = substr($i, 0, 100);
+                                        $endPoint = strrpos($stringCut, ' ');
+                                        $i = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                    endif;
+                                    echo $i;
+                                    ?></h4>
+                            </div>
+                        </a>
+                    <?php endwhile; ?>
+
                 </div>
             </div>
         </div>
     </section>
-    <div class="gap"></div>
-    <section class="empat">
-    </section>
+
 </section>
 
 </body>

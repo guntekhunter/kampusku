@@ -1,3 +1,4 @@
+<?php $current_page = 'index'; ?>
 <?php include("../template/header.php") ?>
 <section class="home">
     <section class="satu">
@@ -103,8 +104,8 @@
     </section>
 
 </section>
-<script src="../js/script.js"></script>
 </body>
+<script src="../js/script.js"></script>
 <!-- illustration -->
 <!-- <a href='https://www.freepik.com/vectors/website'>Website vector created by stories - www.freepik.com</a> -->
 <!-- <a href='https://www.freepik.com/vectors/school'>School vector created by stories - www.freepik.com</a> -->

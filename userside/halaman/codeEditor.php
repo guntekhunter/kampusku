@@ -1,3 +1,4 @@
+<?php $current_page = 'codeEditor'; ?>
 <?php include("../template/header.php") ?>
 <section>
     <?php include("../template/black-header.php") ?>
