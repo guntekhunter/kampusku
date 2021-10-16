@@ -1,4 +1,4 @@
-<?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel");
+<?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel ORDER BY artikel.id DESC ");
 ?>
 <?php while ($result = mysqli_fetch_array($sql1)) : ?>
     <a href="../halaman/isi-cerita.php?id=<?= $result['id']; ?>" class="card-containernya" name="ommaleka">
