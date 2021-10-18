@@ -17,7 +17,7 @@
                         <img src="../image/home page/3.png" alt="">
                     </div>
                 </a>
-                <a href="../halaman/cerita.php" class="card materi">
+                <a href="../halaman/cerita.php?id=1" class="card materi">
                     <div class="card-container">
                         <h4>Materi</h4>
                         <img src="../image/home page/3.png" alt="">

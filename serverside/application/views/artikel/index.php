@@ -2,18 +2,40 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+
+    <?php if (validation_errors()) : ?>
+        <div class="alert alert-danger" role="alert">
+            <?= validation_errors(); ?>
+        </div>
+    <?php endif; ?>
     <?= form_open_multipart('artikel'); ?>
     <div class="row">
         <div class="col-lg-6">
             <?= $this->session->flashdata('message'); ?>
         </div>
     </div>
+
+    <div class="form-group">
+        <div class="col-sm-3 mb3 mb-sm-0">
+            <select name="jenis" id="jenis" class="form-control">
+                <option value="">Pilih jenis artikel</option>
+                <?php foreach ($jenis as $j) : ?>
+                    <option value="<?= $j['id']; ?>"><?= $j['jenis']; ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+
+    </div>
+
     <div class="form-group">
         <label for="judul" class="pl-3">Judul</label>
-        <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="col-sm-3 mb-3 mb-sm-0">
             <input type="text" name='judul' id='judul' class="form-control " autocomplete="off">
         </div>
     </div>
+
+    <!-- dropdown menu -->
+
     <div class="form-group">
         <label for="judul" class="pl-3">isi</label>
         <div class="col-sm-6 h5">
@@ -32,3 +54,4 @@
 
 </div>
 <!-- End of Main Content -->
+<!-- JOIN jenis_artikel ON artikel.id_jenis = jenis_artikel.id -->
