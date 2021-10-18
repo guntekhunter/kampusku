@@ -28,6 +28,7 @@ class Artikel extends CI_Controller
                 'judul' => htmlspecialchars($this->input->post('judul', true)),
                 'isi' => htmlspecialchars($this->input->post('isi', true)),
                 'gambar' => 'default.jpg',
+                "date_created" => time()
             ];
             $this->db->insert('artikel', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">

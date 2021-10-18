@@ -10,7 +10,7 @@
             <div class="gap"> </div>
             <div class="container-cardnya">
                 <div class="cardnya">
-                    <?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel WHERE artikel.id_jenis = 2 ORDER BY artikel.id ASC ");
+                    <?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel WHERE artikel.id_jenis = 3 ORDER BY artikel.id ASC ");
                     ?>
                     <?php while ($result = mysqli_fetch_array($sql1)) : ?>
                         <a href="../halaman/isi-cerita.php?id=<?= $result['id']; ?>" class="card-containernya" name="ommaleka">

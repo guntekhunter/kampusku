@@ -17,13 +17,13 @@
                         <img src="../image/home page/3.png" alt="">
                     </div>
                 </a>
-                <a href="../halaman/cerita.php?id=1" class="card materi">
+                <a href="../halaman/materi.php" class="card materi">
                     <div class="card-container">
                         <h4>Materi</h4>
                         <img src="../image/home page/3.png" alt="">
                     </div>
                 </a>
-                <a href="../halaman/cerita.php" class="card konspirasi">
+                <a href="../halaman/konspirasi.php" class="card konspirasi">
                     <div class="card-container">
                         <h4>Konspirasi</h4>
                         <img src="../image/home page/3.png" alt="">

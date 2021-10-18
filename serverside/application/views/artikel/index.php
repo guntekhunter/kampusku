@@ -34,8 +34,6 @@
         </div>
     </div>
 
-    <!-- dropdown menu -->
-
     <div class="form-group">
         <label for="judul" class="pl-3">isi</label>
         <div class="col-sm-6 h5">
@@ -44,7 +42,7 @@
     </div>
     <div class="ml-2">
         <button type="submit" class="btn btn-primary btn-user">
-            Register Account
+            Add Article
         </button>
     </div>
 
