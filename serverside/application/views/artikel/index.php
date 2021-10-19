@@ -34,6 +34,14 @@
         </div>
     </div>
 
+    <div class="form-group ml-2">
+        <label for="judul" class="ml-3">Gambar</label>
+        <div class="col-sm-3 mb-3 mb-sm-0 p-0">
+            <input type="file" name='userfile' size='20' id='gambar' class="form-control " autocomplete="off" required="">
+        </div>
+    </div>
+
+
     <div class="form-group">
         <label for="judul" class="pl-3">isi</label>
         <div class="col-sm-6 h5">

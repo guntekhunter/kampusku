@@ -1,4 +1,4 @@
-<a href="../halaman/isi-cerita.php" class="card">
+<a href="../halaman/isi_tutorial.php" class="card">
     <div class="card-text">
         <h4>Python</h4>
     </div>

@@ -23,17 +23,30 @@ class Artikel extends CI_Controller
             $this->load->view('artikel/index', $data);
             $this->load->view('templates/footer');
         } else {
-            $data = [
-                'id_jenis' => htmlspecialchars($this->input->post('jenis', true)),
-                'judul' => htmlspecialchars($this->input->post('judul', true)),
-                'isi' => htmlspecialchars($this->input->post('isi', true)),
-                'gambar' => 'default.jpg',
-                "date_created" => time()
-            ];
-            $this->db->insert('artikel', $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-                New article added</div>');
-            redirect('artikel');
+            $config['upload_path']          = './gambar';
+            $config['allowed_types']        = 'gif|jpg|png';
+            $config['max_size']             = 2048;
+
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload('userfile')) {
+                echo "gagal";
+            } else {
+                $gambar = $this->upload->data();
+                $gambar = $gambar['file_name'];
+                $data = [
+                    'id_jenis' => htmlspecialchars($this->input->post('jenis', true)),
+                    'judul' => htmlspecialchars($this->input->post('judul', true)),
+                    'isi' => htmlspecialchars($this->input->post('isi', true)),
+                    'gambar' => $gambar,
+                    "date_created" => time()
+                ];
+                $this->db->insert('artikel', $data);
+                $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+                    New article added</div>');
+                redirect('artikel');
+                // $this->load->view('artikel', $data);
+            }
         }
     }
 }

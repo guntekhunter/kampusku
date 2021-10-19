@@ -31,7 +31,8 @@ include("../template/header.php")
                             <p class="tanggal"><?= date('d F Y', $result['date_created']) ?></p>
                         </div>
                         <div class="image-container">
-                            <img src="../image/artikel page/Image 9.png" alt="">
+                            <?php $g = $result['gambar']; ?>
+                            <img src="../../serverside/gambar/<?= $g; ?>" alt="">
                         </div>
 
                     </a>
@@ -62,7 +63,8 @@ include("../template/header.php")
                             <?php if ($result['id'] != $p['id']) : ?>
                                 <a href="../halaman/isi-cerita.php?id=<?= $result['id']; ?>" class="card-containernya" name="ommaleka">
                                     <div class="image-container">
-                                        <img src="../image/artikel page/Image 9.png" alt="">
+                                        <?php $g = $result['gambar']; ?>
+                                        <img src="../../serverside/gambar/<?= $g; ?>" alt="">
                                     </div>
                                     <div class="text-container">
                                         <h3><?php echo $result['judul']; ?></h3>
