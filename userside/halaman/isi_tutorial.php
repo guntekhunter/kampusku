@@ -20,6 +20,11 @@ include("../template/header.php")
                         halo
                     </div>
                 </a>
+                <a href="./video.php">
+                    <div class="card-tutorial">
+                        halo
+                    </div>
+                </a>
             </div>
             <div class="right">
                 <h3>Cerita Lain</h3>
