@@ -20,22 +20,29 @@ include("../template/header.php")
                                         echo $isi; ?></p>
             </div>
             <div class="right">
-                <h3>Cerita Lain</h3>
+                <h3>Lainnya</h3>
                 <?php $sql2 = mysqli_query($connect, "SELECT * FROM artikel ORDER BY artikel.id ASC");
                 ?>
+                <?php $i = 1; ?>
                 <?php while ($result = mysqli_fetch_array($sql2)) : ?>
-                    <div class="garis"></div>
-                    <a href="../halaman/isi-cerita.php?id=<?= $result['id']; ?>" class="container-lain">
-                        <div class="text-container">
-                            <p><?php echo $result['judul']; ?></p>
-                            <p class="tanggal"><?= date('d F Y', $result['date_created']) ?></p>
-                        </div>
-                        <div class="image-container">
-                            <?php $g = $result['gambar']; ?>
-                            <img src="../../serverside/gambar/<?= $g; ?>" alt="">
-                        </div>
+                    <?php if ($i > 3) {
+                        break;
+                    }; ?>
+                    <?php if ($result['id'] != $p['id']) : ?>
+                        <div class="garis"></div>
+                        <a href="../halaman/isi-cerita.php?id=<?= $result['id']; ?>" class="container-lain">
+                            <div class="text-container">
+                                <p><?php echo $result['judul']; ?></p>
+                                <p class="tanggal"><?= date('d F Y', $result['date_created']) ?></p>
+                            </div>
+                            <div class="image-container">
+                                <?php $g = $result['gambar']; ?>
+                                <img src="../../serverside/gambar/<?= $g; ?>" alt="">
+                            </div>
 
-                    </a>
+                        </a>
+                    <?php endif; ?>
+                    <?php $i++; ?>
                 <?php endwhile; ?>
                 <div class="gap"></div>
                 <h5><a href=""> More..</a></h5>
