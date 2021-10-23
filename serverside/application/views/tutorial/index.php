@@ -25,11 +25,14 @@
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <?php $judul = $_GET['namanya']; ?>
-                    <?php $queryJudul = "SELECT * FROM tbl_bahasa WHERE tbl_bahasa.id = $judul";
+                    <?php $queryJudul = "SELECT * FROM tbl_bahasa";
                     $nama = $this->db->query($queryJudul)->result_array(); ?>
 
                     <?php foreach ($nama as $n) : ?>
-                        <h6 class="m-0 font-weight-bold text-primary"><?= $n['nama']; ?></h6>
+                        <?php $id = $n['id']; ?>
+                        <?php if ($judul == $id) : ?>
+                            <h6 class="m-0 font-weight-bold text-primary"><?= $n['nama']; ?></h6>
+                        <?php endif; ?>
                     <?php endforeach; ?>
                 </div>
                 <div class="card-body">

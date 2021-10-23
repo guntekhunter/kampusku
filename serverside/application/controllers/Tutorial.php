@@ -13,6 +13,7 @@ class Tutorial extends CI_Controller
         $data['bahasa'] = $this->db->get('tbl_bahasa')->result_array();
 
         $this->form_validation->set_rules('menu', 'Menu', 'required');
+        $this->form_validation->set_rules('namanya', 'Namanya', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
