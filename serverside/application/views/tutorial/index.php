@@ -114,11 +114,6 @@
 
             </div>
             <?= form_open_multipart('tutorial'); ?>
-            <div class="row">
-                <div class="col-lg-6">
-                    <?= $this->session->flashdata('message'); ?>
-                </div>
-            </div>
             <div class="form-group">
                 <label for="judul" class="pl-3">Nama bahasa</label>
                 <div class="col-sm-3 mb-3 mb-sm-0">
@@ -129,17 +124,15 @@
             <div class="form-group ml-2">
                 <label for="judul" class="ml-3">Gambar</label>
                 <div class="col-sm-3 mb-3 mb-sm-0 p-0">
-                    <input type="file" name='userfile' size='20' id='gambar' class="form-control " autocomplete="off">
+                    <input type="file" name='userfile' size='20' id='gambar' class="form-control " autocomplete="off" required="">
                 </div>
+
+                <div class="ml-2 modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+
+                </form>
             </div>
-
-            <div class="ml-2 modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Add</button>
-            </div>
-
-            </form>
-
         </div>
     </div>
-</div>
