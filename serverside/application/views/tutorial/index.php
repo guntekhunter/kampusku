@@ -4,14 +4,12 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-0 text-gray-800"><?= $title; ?></h1>
     <!-- dropdown -->
-    <?= form_error('nama', '<div class="alert alert-danger" role="alert">
-                ', '</div>') ?>
     <?= form_error('gambar', '<div class="alert alert-danger" role="alert">
                 ', '</div>') ?>
 
     <?= $this->session->flashdata('message'); ?>
     <?= form_open("Tutorial") ?>
-    <select name="nama">
+    <select name="id">
         <option value="">Pilih Bahasa</option>
         <?php if (count($ommaleka)) : ?>
             <?php foreach ($ommaleka as $t) : ?>
@@ -47,9 +45,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php if (count($namanya)) : ?>
+                            <?php if (count($coba)) : ?>
                                 <?php $i = 1; ?>
-                                <?php foreach ($namanya as $t) : ?>
+                                <?php foreach ($coba as $t) : ?>
                                     <tr>
                                         <th scope="row"><?= $i; ?></th>
                                         <th><?= $t->judul; ?></th>

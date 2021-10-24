@@ -12,7 +12,7 @@ class Tutorial_model extends CI_Model
     }
     public function getNama($bahasa)
     {
-        $this->db->select('tutorial.*', 'tbl_bahasa.nama');
+        $this->db->select('tutorial.*', 'tbl_bahasa.nama', 'tbl_bahasa.id');
         $this->db->from('tutorial');
         $this->db->join('tbl_bahasa', 'tutorial.id_bahasa = tbl_bahasa.id');
         $this->db->where(['tbl_bahasa.id' => $bahasa]);

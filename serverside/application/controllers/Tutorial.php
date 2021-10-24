@@ -10,11 +10,12 @@ class Tutorial extends CI_Controller
         $this->session->userdata('email')])->row_array();
         // ambil data dari model tutorial_model dan data dari post nama pada halaman tutorial
         $this->load->model('Tutorial_model');
-        $bahasa = $this->input->post('nama');
+        $bahasa = $this->input->post('id');
         $getBahasa = $this->Tutorial_model->getTutorial();
         $namanya = $this->Tutorial_model->getNama($bahasa);
         $data['bahasa'] = $getBahasa;
-        $data['namanya'] = $namanya;
+        $data['coba'] = $namanya;
+
 
 
         $data['tutor'] = $this->db->get('tutorial')->result_array();
