@@ -4,16 +4,27 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-0 text-gray-800"><?= $title; ?></h1>
     <!-- dropdown -->
-    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Pilih Bahasa
-    </button>
+    <?= form_error('nama', '<div class="alert alert-danger" role="alert">
+                ', '</div>') ?>
+    <?= form_error('gambar', '<div class="alert alert-danger" role="alert">
+                ', '</div>') ?>
+
+    <?= $this->session->flashdata('message'); ?>
+    <?= form_open("Tutorial") ?>
+    <select name="nama">
+        <option value="">Pilih Bahasa</option>
+        <?php if (count($ommaleka)) : ?>
+            <?php foreach ($ommaleka as $t) : ?>
+                <option value='<?= $t->id ?>' href="#"><?= $t->nama ?></option>
+            <?php endforeach; ?>
+        <?php else : ?>
+        <?php endif; ?>
+    </select>
+    <?= form_submit(['name' => 'submit', 'value' => 'Pilih Bahasa', 'class' => 'btn btn-primary']); ?>
+    <?= form_close(); ?>
+
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <?php foreach ($bahasa as $b) : ?>
-            <form method="GET">
-                <input type="hidden" name="namanya" value="<?= $b['id']; ?>">
-                <button type="submit" class="btn btn-success "><?= $b['nama']; ?></button>
-            </form>
-        <?php endforeach; ?>
+
     </div>
     <a href="" class="btn btn-primary mb-3 mt-3" data-toggle="modal" data-target="#newMenuModal">Tambah Bahasa</a>
 
@@ -24,16 +35,7 @@
             <!-- Basic Card Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <?php $judul = $_GET['namanya']; ?>
-                    <?php $queryJudul = "SELECT * FROM tbl_bahasa";
-                    $nama = $this->db->query($queryJudul)->result_array(); ?>
-
-                    <?php foreach ($nama as $n) : ?>
-                        <?php $id = $n['id']; ?>
-                        <?php if ($judul == $id) : ?>
-                            <h6 class="m-0 font-weight-bold text-primary"><?= $n['nama']; ?></h6>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
+                    <h6 class="m-0 font-weight-bold text-primary">judul</h6>
                 </div>
                 <div class="card-body">
                     <table class="table table-success table-striped table-hover">
@@ -45,22 +47,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $nama = $_GET['namanya']; ?>
-                            <?php $i = 1; ?>
-                            <?php foreach ($tutor as $t) : ?>
-                                <?php $id = $t['id_bahasa']; ?>
-                                <?php if ($id == $nama) : ?>
+                            <?php if (count($namanya)) : ?>
+                                <?php $i = 1; ?>
+                                <?php foreach ($namanya as $t) : ?>
                                     <tr>
                                         <th scope="row"><?= $i; ?></th>
-                                        <th><?= $t['judul'] ?></th>
+                                        <th><?= $t->judul; ?></th>
                                         <td>
                                             <a href="" class="badge badge-success mr-2 p-2">edit</a>
                                             <a href="" class="badge badge-danger p-2">delete</a>
                                         </td>
                                     </tr>
-                                <?php endif; ?>
-                                <?php $i++; ?>
-                            <?php endforeach; ?>
+                                    <?php $i++; ?>
+                                <?php endforeach; ?>
+                            <?php else : ?>
+                                <tr>
+                                    <td>Belum ada materi</td>
+                                </tr>
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
@@ -109,17 +113,33 @@
                 <h5 class="modal-title" id="newMenuModalLabel">Add New Menu</h5>
 
             </div>
-            <form action="<?= base_url('menu'); ?>" method="post">
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="menu" name="menu" placeholder="Menu Name" autocomplete="off">
-                    </div>
+            <?= form_open_multipart('tutorial'); ?>
+            <div class="row">
+                <div class="col-lg-6">
+                    <?= $this->session->flashdata('message'); ?>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+            <div class="form-group">
+                <label for="judul" class="pl-3">Nama bahasa</label>
+                <div class="col-sm-3 mb-3 mb-sm-0">
+                    <input type="text" name='nama' id='nama' class="form-control " autocomplete="off">
                 </div>
+            </div>
+
+            <div class="form-group ml-2">
+                <label for="judul" class="ml-3">Gambar</label>
+                <div class="col-sm-3 mb-3 mb-sm-0 p-0">
+                    <input type="file" name='userfile' size='20' id='gambar' class="form-control " autocomplete="off">
+                </div>
+            </div>
+
+            <div class="ml-2 modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+
             </form>
+
         </div>
     </div>
 </div>

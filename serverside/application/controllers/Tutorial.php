@@ -8,12 +8,21 @@ class Tutorial extends CI_Controller
         $data['title'] = 'Tutorial';
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
+        // $data['materi'] = $this->Tutorial_model->fetch_data();
+        $this->load->model('Tutorial_model');
+        $bahasa = $this->input->post('nama');
+        $getBahasa = $this->Tutorial_model->getTutorial();
+        $namanya = $this->Tutorial_model->getNama($bahasa);
+        $data['bahasa'] = $getBahasa;
+        $data['namanya'] = $namanya;
+
 
         $data['tutor'] = $this->db->get('tutorial')->result_array();
         $data['bahasa'] = $this->db->get('tbl_bahasa')->result_array();
 
+        $data['ommaleka'] = $this->Tutorial_model->getTutorial();
         $this->form_validation->set_rules('menu', 'Menu', 'required');
-        $this->form_validation->set_rules('namanya', 'Namanya', 'required');
+
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
@@ -27,5 +36,30 @@ class Tutorial extends CI_Controller
                 New menu added</div>');
             redirect('menu');
         }
+    }
+    public function getNama()
+    {
+        $data['title'] = 'Tutorial';
+        $data['user'] = $this->db->get_where('user', ['email' =>
+        $this->session->userdata('email')])->row_array();
+        $this->load->model('Tutorial_model');
+        // $data['materi'] = $this->Tutorial_model->fetch_data();
+
+
+        $data['tutor'] = $this->db->get('tutorial')->result_array();
+        $data['bahasa'] = $this->db->get('tbl_bahasa')->result_array();
+
+        $data['ommaleka'] = $this->Tutorial_model->getTutorial();
+        $this->load->model('Tutorial_model');
+        $bahasa = $this->input->post('nama');
+        $getBahasa = $this->Tutorial_model->getTutorial();
+        $namanya = $this->Tutorial_model->getNama($bahasa);
+        $data['bahasa'] = $getBahasa;
+        $data['namanya'] = $namanya;
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('tutorial/index', $data);
+        $this->load->view('templates/footer');
     }
 }
