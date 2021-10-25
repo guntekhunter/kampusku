@@ -68,4 +68,29 @@
     padding: 2rem;
     border: 1px solid rgba(0, 0, 0, 0.205);
     border-radius: .3rem;
+    width: 100%;
+}
+.video-wrapper-wrapper{
+    background: rgb(230, 230, 230);
+    width: 100%;
+    padding:5rem 10rem;
+}
+.video-wrapper{
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 2.5rem;
+    height: 0;
+}
+.video-wrapper iframe{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+}
+.container-wrapper-video{
+    width: 70%;
 }
