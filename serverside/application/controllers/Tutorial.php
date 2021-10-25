@@ -13,15 +13,15 @@ class Tutorial extends CI_Controller
         $bahasa = $this->input->post('id');
         $getBahasa = $this->Tutorial_model->getTutorial();
         $namanya = $this->Tutorial_model->getNama($bahasa);
+        $dapatkan = $this->Tutorial_model->getBahasa($bahasa);
         $data['bahasa'] = $getBahasa;
         $data['coba'] = $namanya;
-
-
+        $data['dapat'] = $dapatkan;
 
         $data['tutor'] = $this->db->get('tutorial')->result_array();
         $data['bahasa'] = $this->db->get('tbl_bahasa')->result_array();
 
-        $data['ommaleka'] = $this->Tutorial_model->getTutorial();
+        $data['ommaleka'] = $getBahasa;
         $this->form_validation->set_rules('nama', 'Nama', 'required');
 
 
@@ -36,7 +36,7 @@ class Tutorial extends CI_Controller
             $gambar = $_FILES['userfile'];
             if ($gambar = '') {
             } else {
-                $config['upload_path']          = './gambar';
+                $config['upload_path']          = './gambar/bahasa';
                 $config['allowed_types']        = 'gif|jpg|png';
                 $config['max_size']             = 2048;
 

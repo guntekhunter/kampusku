@@ -33,7 +33,13 @@
             <!-- Basic Card Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">judul</h6>
+                    <?php if (count($dapat)) : ?>
+                        <?php foreach ($dapat as $d) : ?>
+                            <h6 class="m-0 font-weight-bold text-primary"><?= $d->nama; ?></h6>
+                        <?php endforeach; ?>
+                    <?php else : ?>
+                        <h6>Pilih bahasa terlebih dahulu</h6>
+                    <?php endif; ?>
                 </div>
                 <div class="card-body">
                     <table class="table table-success table-striped table-hover">
@@ -81,6 +87,40 @@
                 <div class="collapse show" id="collapseCardExample">
                     <div class="card-body">
 
+
+                        <div class="form-group">
+                            <label for="judul" class="pl-3">Bahasa</label>
+                            <div class="col-sm-12 mb-3 mb-sm-0">
+                                <?php if (count($dapat)) : ?>
+                                    <?php foreach ($dapat as $d) : ?>
+                                        <input type="text" name='bahasa' id='bahasa' class="form-control " autocomplete="off" value="<?= $d->nama; ?>">
+                                    <?php endforeach ?>
+                                <?php else : ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="judul" class="pl-3">Nama materi</label>
+                            <div class="col-sm-12 mb-3 mb-sm-0">
+                                <input type="text" name='judul' id='judul' class="form-control " autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="judul" class="pl-3">Url video</label>
+                            <div class="col-sm-12 mb-3 mb-sm-0">
+                                <input type="text" name='judul' id='judul' class="form-control " autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="ml-2">
+                            <button type="submit" class="btn btn-primary btn-user">
+                                + materi
+                            </button>
+                        </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
@@ -90,18 +130,7 @@
     </div>
 
 </div>
-<!-- /.container-fluid -->
 
-</div>
-<!-- End of Main Content -->
-</div>
-
-
-</div>
-<!-- /.container-fluid -->
-
-</div>
-<!-- End of Main Content -->
 
 <!-- Modal -->
 <div class="modal fade" id="newMenuModal" tabindex="-1" aria-labelledby="newMenuModalLabel" aria-hidden="true">
