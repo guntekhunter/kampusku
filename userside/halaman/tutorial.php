@@ -1,5 +1,6 @@
 <?php $current_page = 'tutorial'; ?>
 <?php include("../template/header.php") ?>
+<?php include "../conf/koneksi.php"; ?>
 <section class="tutorial">
         <?php include("../template/black-header.php") ?>
         <section class="dua">
@@ -7,14 +8,19 @@
                         <div class="card-wrapper">
                                 <h1>Bahasa pemrograman</h1>
                                 <div class="row">
-                                        <?php include("../template/bhs-program.php") ?>
-                                        <?php include("../template/bhs-program.php") ?>
-                                        <?php include("../template/bhs-program.php") ?>
-                                        <?php include("../template/bhs-program.php") ?>
-                                        <?php include("../template/bhs-program.php") ?>
-                                        <?php include("../template/bhs-program.php") ?>
-                                        <?php include("../template/bhs-program.php") ?>
-                                        <?php include("../template/bhs-program.php") ?>
+                                        <?php $sql1 = mysqli_query($connect, "SELECT * FROM tbl_bahasa ORDER BY tbl_bahasa.id ASC ");
+                                        ?>
+                                        <?php while ($result = mysqli_fetch_array($sql1)) : ?>
+                                                <a href="../halaman/isi_tutorial.php?id=<?= $result['id']; ?>" class="card">
+                                                        <div class="card-text">
+                                                                <h4><?= $result['nama']; ?></h4>
+                                                        </div>
+                                                        <div class="card-image">
+                                                                <?php $r = $result['gambar']; ?>
+                                                                <img src="../../serverside/gambar/<?= $r; ?>" alt="">
+                                                        </div>
+                                                </a>
+                                        <?php endwhile; ?>
                                 </div>
                         </div>
         </section>
