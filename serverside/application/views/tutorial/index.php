@@ -6,6 +6,10 @@
     <!-- dropdown -->
     <?= form_error('gambar', '<div class="alert alert-danger" role="alert">
                 ', '</div>') ?>
+    <?= form_error('nama', '<div class="alert alert-danger" role="alert">
+                ', '</div>') ?>
+    <?= form_error('url', '<div class="alert alert-danger" role="alert">
+                ', '</div>') ?>
 
     <?= $this->session->flashdata('message'); ?>
     <?= form_open("Tutorial") ?>
@@ -86,15 +90,22 @@
                 <!-- Card Content - Collapse -->
                 <div class="collapse show" id="collapseCardExample">
                     <div class="card-body">
+                        <?= form_open_multipart('tutorial/materi'); ?>
 
 
                         <div class="form-group">
                             <label for="judul" class="pl-3">Bahasa</label>
                             <div class="col-sm-12 mb-3 mb-sm-0">
                                 <?php if (count($dapat)) : ?>
-                                    <?php foreach ($dapat as $d) : ?>
-                                        <input type="text" name='bahasa' id='bahasa' class="form-control " autocomplete="off" value="<?= $d->nama; ?>">
-                                    <?php endforeach ?>
+                                    <?php if (count($id)) : ?>
+                                        <?php foreach ($dapat as $d) : ?>
+                                            <?php foreach ($id as $i) : ?>
+                                                <input type="hidden" name='id' id='id' class="form-control " autocomplete="off" value="<?= $i->id; ?>">
+                                                <input type="text" class="form-control " autocomplete="off" value="<?= $d->nama; ?>">
+                                            <?php endforeach ?>
+                                        <?php endforeach ?>
+                                    <?php else : ?>
+                                    <?php endif; ?>
                                 <?php else : ?>
                                 <?php endif; ?>
                             </div>
@@ -103,14 +114,14 @@
                         <div class="form-group">
                             <label for="judul" class="pl-3">Nama materi</label>
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" name='judul' id='judul' class="form-control " autocomplete="off">
+                                <input type="text" name='nama' id='nama' class="form-control " autocomplete="off">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="judul" class="pl-3">Url video</label>
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" name='judul' id='judul' class="form-control " autocomplete="off">
+                                <input type="text" name='url' id='url' class="form-control " autocomplete="off">
                             </div>
                         </div>
 
