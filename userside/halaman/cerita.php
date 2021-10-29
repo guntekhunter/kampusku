@@ -39,5 +39,4 @@
     </section>
 
 </section>
-
-</html>
+<?php include("../template/footer.php") ?>

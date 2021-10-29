@@ -180,7 +180,8 @@ div.text2{
 /* section tiga */
 .home section.tiga{
     width:100%;
-    height:60vh;
+    height:80vh;
+    padding: 2rem 0rem;
     background: #FD9388;
     display: flex;
     justify-content: space-around;
@@ -261,4 +262,14 @@ section .row .container{
 
     display: flex;
     justify-content: space-around;
+}
+footer{
+    height: auto;
+    padding: .5rem;
+    background: #242734;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-weight: lighter;
+    font-size: .8rem;
 }
