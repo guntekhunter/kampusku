@@ -94,3 +94,9 @@
 .container-wrapper-video{
     width: 70%;
 }
+
+.selesai{
+    color: rgb(12, 218, 12);
+    font-weight:bold;
+    display: none;
+}

@@ -4,24 +4,36 @@ include "../conf/koneksi.php";
 include("../template/header.php")
 ?>
 
-
-
 <section class="isi-cerita">
     <section class="satu">
         <container class="container-wrapper-video">
             <div class="container-video">
                 <div class="video-wrapper-wrapper">
                     <div class="video-wrapper">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/l1W2OwV5rgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <?php $id = $_GET['id']; ?>
+                        <?php $sql1 = mysqli_query($connect, "SELECT tutorial.url_video FROM tutorial WHERE tutorial.id = $id");
+                        ?>
+                        <?php while ($result = mysqli_fetch_array($sql1)) : ?>
+                            <iframe <?= $result['url_video']; ?> allowfullscreen></iframe>
+
+                        <?php endwhile; ?>
                     </div>
                 </div>
                 <div class="gap"></div>
                 <div class="gap"></div>
-                <a href="./video.php">
-                    <div class="card-tutorial">
-                        halo
-                    </div>
-                </a>
+                <?php $bahasa = $_GET['bahasa']; ?>
+                <?php $sql1 = mysqli_query($connect, "SELECT * FROM tutorial WHERE tutorial.id_bahasa = $bahasa ORDER BY tutorial.id ASC ");
+                ?>
+                <?php while ($result = mysqli_fetch_array($sql1)) : ?>
+                    <?php if ($result['id'] > $id) : ?>
+                        <a href="./video.php?id=<?= $result['id']; ?>&bahasa=<?= $result['id_bahasa']; ?>">
+                            <div class=" card-tutorial">
+                                <?= $result['judul']; ?>
+                            </div>
+                        </a>
+                    <?php else : ?>
+                    <?php endif; ?>
+                <?php endwhile; ?>
             </div>
         </container>
     </section>

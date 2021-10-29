@@ -6,10 +6,7 @@
     <!-- dropdown -->
     <?= form_error('gambar', '<div class="alert alert-danger" role="alert">
                 ', '</div>') ?>
-    <?= form_error('nama', '<div class="alert alert-danger" role="alert">
-                ', '</div>') ?>
-    <?= form_error('url', '<div class="alert alert-danger" role="alert">
-                ', '</div>') ?>
+
 
     <?= $this->session->flashdata('message'); ?>
     <?= form_open("Tutorial") ?>
@@ -90,6 +87,10 @@
                 <!-- Card Content - Collapse -->
                 <div class="collapse show" id="collapseCardExample">
                     <div class="card-body">
+                        <?= form_error('nama', '<div class="alert alert-danger" role="alert">
+                ', '</div>') ?>
+                        <?= form_error('url', '<div class="alert alert-danger" role="alert">
+                ', '</div>') ?>
                         <?= form_open_multipart('tutorial/materi'); ?>
 
 
@@ -101,7 +102,7 @@
                                         <?php foreach ($dapat as $d) : ?>
                                             <?php foreach ($id as $i) : ?>
                                                 <input type="hidden" name='id' id='id' class="form-control " autocomplete="off" value="<?= $i->id; ?>">
-                                                <input type="text" class="form-control " autocomplete="off" value="<?= $d->nama; ?>">
+                                                <input type="text" class="form-control " autocomplete="off" value="<?= $d->nama; ?>" readonly>
                                             <?php endforeach ?>
                                         <?php endforeach ?>
                                     <?php else : ?>

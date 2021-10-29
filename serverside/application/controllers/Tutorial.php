@@ -102,7 +102,7 @@ class Tutorial extends CI_Controller
         } else {
             $data = [
                 'id_bahasa' => htmlspecialchars($this->input->post('id', true)),
-                'judul' => htmlspecialchars($this->input->post('judul', true)),
+                'judul' => htmlspecialchars($this->input->post('nama', true)),
                 'url_video' => htmlspecialchars($this->input->post('url', true)),
             ];
             $this->db->insert('tutorial', $data);

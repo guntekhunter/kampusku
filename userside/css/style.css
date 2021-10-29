@@ -25,6 +25,7 @@ h3{
     width:10rem;
     height: 3rem;
     border-radius: .5rem;
+    padding: 0rem .1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
