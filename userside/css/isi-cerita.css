@@ -72,7 +72,7 @@
     justify-content: space-around;
     position: relative;
     display: flex;
-    height:70vh;
+    height:auto;
     width: 100%;
     margin: 1rem 0rem;
 }

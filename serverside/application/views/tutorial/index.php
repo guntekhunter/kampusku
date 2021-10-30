@@ -140,38 +140,37 @@
         </div>
 
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="newMenuModal" tabindex="-1" aria-labelledby="newMenuModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newMenuModalLabel">Add New Menu</h5>
+    
+                </div>
+                <?= form_open_multipart('tutorial'); ?>
+                <div class="form-group">
+                    <label for="judul" class="pl-3">Nama bahasa</label>
+                    <div class="col-sm-3 mb-3 mb-sm-0">
+                        <input type="text" name='nama' id='nama' class="form-control " autocomplete="off">
+                    </div>
+                </div>
+    
+                <div class="form-group ml-2">
+                    <label for="judul" class="ml-3">Gambar</label>
+                    <div class="col-sm-3 mb-3 mb-sm-0 p-0">
+                        <input type="file" name='userfile' size='20' id='gambar' class="form-control " autocomplete="off" required="">
+                    </div>
+    
+                    <div class="ml-2 modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+    
+                    </form>
+                </div>
+            </div>
+        </div>
 
 </div>
 
-
-<!-- Modal -->
-<div class="modal fade" id="newMenuModal" tabindex="-1" aria-labelledby="newMenuModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="newMenuModalLabel">Add New Menu</h5>
-
-            </div>
-            <?= form_open_multipart('tutorial'); ?>
-            <div class="form-group">
-                <label for="judul" class="pl-3">Nama bahasa</label>
-                <div class="col-sm-3 mb-3 mb-sm-0">
-                    <input type="text" name='nama' id='nama' class="form-control " autocomplete="off">
-                </div>
-            </div>
-
-            <div class="form-group ml-2">
-                <label for="judul" class="ml-3">Gambar</label>
-                <div class="col-sm-3 mb-3 mb-sm-0 p-0">
-                    <input type="file" name='userfile' size='20' id='gambar' class="form-control " autocomplete="off" required="">
-                </div>
-
-                <div class="ml-2 modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Add</button>
-                </div>
-
-                </form>
-            </div>
-        </div>
-    </div>

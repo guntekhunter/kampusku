@@ -1,7 +1,7 @@
 <?php $current_page = 'tutorial'; ?>
 <?php include("../template/header.php") ?>
 <?php include "../conf/koneksi.php"; ?>
-<section class="tutorial">
+<div class="tutorial">
         <?php include("../template/black-header.php") ?>
         <section class="dua">
                 <div class="container">
@@ -25,62 +25,38 @@
                         </div>
         </section>
         <section class="tiga">
-                <div class="container header">
-                        <h1>Sering dicari</h1>
-                        <ul>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                        </ul>
-                        <div class="gap"></div>
-                        <h1>Sering dicari</h1>
-                        <ul>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
-                                                iusto!</a></li>
-                        </ul>
+                <div class="header">
+                        <div class="container-cardnya">
+
+                                <h1>Sering dicari</h1>
+                                <ul>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
+                                                        iusto!</a></li>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
+                                                        iusto!</a></li>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
+                                                        iusto!</a></li>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
+                                                        iusto!</a></li>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
+                                                        iusto!</a></li>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
+                                                        iusto!</a></li>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
+                                                        iusto!</a></li>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
+                                                        iusto!</a></li>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
+                                                        iusto!</a></li>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
+                                                        iusto!</a></li>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui error reprehenderit
+                                                        iusto!</a></li>
+                                </ul>
+                        </div>
                 </div>
         </section>
-</section>
-
-</body>
-
-</html>
+</div>
+<div class="gap"></div>
+<div class="gap"></div>
+<?php include("../template/footer.php") ?>

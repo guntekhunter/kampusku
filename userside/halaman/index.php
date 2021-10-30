@@ -1,7 +1,7 @@
 <?php $current_page = 'index'; ?>
 <?php include("../template/header.php") ?>
 
-<section class="home">
+<div class="home">
     <section class="satu">
         <div class="cover">
             <div class="text1">
@@ -49,7 +49,7 @@
             <div class="text3">
                 <h1 class="judul3" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="1000">Fitur keren</h1>
                 <div class="gap"></div>
-                <h3 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="1300">Kami memiliki fitur code editor, untuk memudahkan teman teman mengecek langsung kode teman teman
+                <h3 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="1300">Kami memiliki fitur code editor, untuk memudahkan teman teman mengecek langsung kode teman teman
                     berdasarkan tutorial yang dipelajari</h3>
                 <div class="gap"></div>
                 <div>
@@ -97,10 +97,11 @@
                     <h3 data-aos="fade-left" data-aos-easing="linear" data-aos-duration="300" data-aos-delay="1800">Lorem ipsum dolor sit, amet consectetur adipisicing</h3>
                     <div class="gap"></div>
                     <a href="./codeEditor.php" class="klik">
-                        <div class="tombol tombol-satu" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="2300">Coba</div>
+                        <div class="tombol tombol-satu" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500" data-aos-delay="1300">Coba</div>
                     </a>
                 </div>
             </div>
         </div>
     </section>
+</div>
     <?php include("../template/footer.php") ?>

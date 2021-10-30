@@ -40,12 +40,10 @@ include("../template/header.php")
     <section class="dua">
         <div class="container">
             <a href="./tutorial.php" class="klik">
-                <div class="tombol tombol-satu">Kembali ke tutorial</div>
+                <div class="tombol tombol-satu">Kembali</div>
             </a>
         </div>
     </section>
-
-    
-    </body>
-
-    </html>
+    <div class="gap"></div>
+    <div class="gap"></div>
+    <?php include("../template/footer.php") ?>
