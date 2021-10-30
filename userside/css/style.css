@@ -99,18 +99,35 @@ nav ul li a:hover:after{
 /* section satu */
 .home section.satu{
     background: #242734;
+    padding-top: 5rem;
     width:100%;
-    height:80vh;
-    display: flex;
+    height:70vh;
+    display: block;
     justify-content: space-around;
     
+}
+.home section.satu::before{
+    content: "";
+    display: block;
+    width:100%;
+    height: 100vh;
+    background: url('../image/wave.png') 75% 100% no-repeat;
+    position: absolute;
+    left:0;
+    opacity: .7;
+
+
+}
+.container-home{
+    display: flex;
+    width: 70%;
 }
 div.cover{
     display: flex;
     align-items: center;
-    width:70%;
+    width:100%;
     height:100%;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 .text1{
@@ -139,10 +156,11 @@ div.cover{
 .image1{
     width: 50%;
     height:auto;
+    z-index: 1;
 }
 img{
     width:100%;
-    height:100%;
+    height:auto;
 }
 
 /* section dua */

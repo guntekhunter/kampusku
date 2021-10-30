@@ -4,28 +4,30 @@
 <div class="home">
     <section class="satu">
         <div class="cover">
-            <div class="text1">
-                <h1 class="judul-satu" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="1000">Selamat datang di Kampusku </h1>
-                <div class="gap"></div>
-                <h4 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="1300">Tempat belajar coding dan pelajaran lainnya tersedia dalam satu website yang sangat cocok dengan
-                    mahasiswa yang sedang mencari referensi belajar </h4>
-                <div class="gap"></div>
-                <div class="gabung-tombol">
-                    <div>
-                        <a href="./artikel.php" class="klik">
-                            <div class="tombol tombol-satu" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="1900">Baca Artikel</div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="../halaman/tutorial.php" class="klik">
-                            <div class="tombol tombol-dua" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="2000">Mulai Tutorial</div>
-                        </a>
+            <div class="container-home">
+                <div class="text1">
+                    <h1 class="judul-satu" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="1000">Selamat datang di Kampusku </h1>
+                    <div class="gap"></div>
+                    <h4 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="1300">Tempat belajar coding dan pelajaran lainnya tersedia dalam satu website yang sangat cocok dengan
+                        mahasiswa yang sedang mencari referensi belajar </h4>
+                    <div class="gap"></div>
+                    <div class="gabung-tombol">
+                        <div>
+                            <a href="./artikel.php" class="klik">
+                                <div class="tombol tombol-satu" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="1900">Baca Artikel</div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="../halaman/tutorial.php" class="klik">
+                                <div class="tombol tombol-dua" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="2000">Mulai Tutorial</div>
+                            </a>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="image1">
-                <img src="../image/home page/1.png" alt="" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
+                <div class="image1">
+                    <img src="../image/home page/1.png" alt="" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
+                </div>
             </div>
         </div>
     </section>
@@ -104,4 +106,4 @@
         </div>
     </section>
 </div>
-    <?php include("../template/footer.php") ?>
+<?php include("../template/footer.php") ?>
