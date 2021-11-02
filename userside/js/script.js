@@ -3,7 +3,9 @@ const kiri = document.querySelector(".kiri"),
     bar = document.querySelector(".bar"),
     editor = document.querySelector(".editor"),
     run = document.querySelector(".run-btn"),
-    iframe = document.querySelector(".iframe");
+    iframe = document.querySelector(".iframe"),
+    dark = document.querySelector(".dark-btn"),
+    light = document.querySelector(".light-btn");
 
 const drag = (e) => {
     e.preventDefault();
@@ -24,4 +26,16 @@ run.addEventListener("click", () => {
     iframe.style.color = ("white");
     iframe.src = "data:text/html;charset=utf-8," + encodeURI
         (html);
+})
+// sets dark mode
+
+dark.addEventListener("click", () => {
+    editor.style.backgroundColor = "#363836";
+    editor.style.color = "#eee";
+})
+
+// set light mode
+light.addEventListener("click", () => {
+    editor.style.backgroundColor = "";
+    editor.style.color = "";
 })

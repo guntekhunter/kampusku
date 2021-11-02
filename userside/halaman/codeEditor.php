@@ -4,7 +4,11 @@
     <section>
         <?php include("../template/black-header.php") ?>
         <div class="editor-menu">
-            <button class="run-btn button">Run >></button>
+            <div class="editor-menu-container">
+                <button class="run-btn button">Run >></button>
+                <button class="dark-btn button">Dark</button>
+                <button class="light-btn button">Light</button>
+            </div>
         </div>
         <div class="container-code">
             <div class="kiri">
@@ -12,7 +16,7 @@
             </div>
             <div class="bar"></div>
             <div class="kanan">
-                <iframe src="" frameborder="0" class="iframe">asdasd</iframe>
+                <iframe src="" frameborder="0" class="iframe editor">asdasd</iframe>
             </div>
         </div>
     </section>

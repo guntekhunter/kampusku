@@ -51,6 +51,7 @@ header{
     justify-content: space-around;
     box-shadow:2px 5px 8px #88888833;
     z-index: 100;
+    z-index: 100;
     
     
 }
@@ -111,10 +112,10 @@ nav ul li a:hover:after{
     display: block;
     width:100%;
     height: 100vh;
-    background: url('../image/wave.png') 75% 100% no-repeat;
+    background: url('../image/wave.png') 5% 500% no-repeat;
     position: absolute;
     left:0;
-    opacity: .7;
+    opacity: 1;
 
 
 }
@@ -156,7 +157,6 @@ div.cover{
 .image1{
     width: 50%;
     height:auto;
-    z-index: 1;
 }
 img{
     width:100%;
@@ -205,6 +205,17 @@ div.text2{
     justify-content: space-around;
     
 }
+.home section.tiga::after{
+    content: "";
+    display: block;
+    width:100%;
+    height: 100vh;
+    background: url('../image/wave.png') 10% 500% no-repeat;
+    position: absolute;
+    left:0;
+    z-index: 1;
+    opacity: 1;
+}
 div.cover3{
     align-items: center;
     justify-content: space-between;
@@ -219,6 +230,7 @@ div.image3{
     display: flex;
     justify-content: right;
     padding: 2rem 0rem;
+    z-index: 80;
 }
 img.gambar3{
     width:auto;
@@ -229,6 +241,7 @@ div.text3{
     width:60%;
     color: #FEFAFE;
     align-items: center;
+    z-index: 100;
 }
 .judul3{
     font-size: 2rem;
