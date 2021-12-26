@@ -59,7 +59,7 @@
                                         endif;
                                         echo $i;
                                         ?></h4>
-                                </div>  
+                                </div>
                             </a>
                         <?php endif; ?>
                         <?php $e++; ?>

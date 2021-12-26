@@ -51,7 +51,7 @@
             <div class="text3">
                 <h1 class="judul3" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="1000">Fitur keren</h1>
                 <div class="gap"></div>
-                <h3 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="1300">Kami memiliki fitur code editor, untuk memudahkan teman teman mengecek langsung kode teman teman
+                <h3 data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800" data-aos-delay="1300">Kami memiliki fitur code editor, untuk memudahkan teman-teman mengecek langsung kode teman-teman
                     berdasarkan tutorial yang dipelajari</h3>
                 <div class="gap"></div>
                 <div>

@@ -1,4 +1,7 @@
 <footer>
+    <section class="footer">
+
+    </section>
     <span>Copyright &copy; Guntek 2020</span>
 </footer>
 </body>
@@ -13,6 +16,9 @@
         once: true,
     });
 </script>
+
+<!-- code editor -->
+
 <!-- illustration -->
 <!-- <a href='https://www.freepik.com/vectors/website'>Website vector created by stories - www.freepik.com</a> -->
 <!-- <a href='https://www.freepik.com/vectors/school'>School vector created by stories - www.freepik.com</a> -->

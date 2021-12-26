@@ -31,6 +31,9 @@ h3{
     align-items: center;
     cursor: pointer;
 }
+.tombol::hover{
+    color: red;
+}
 .gap{
     height:1rem;
 }
@@ -50,7 +53,6 @@ header{
     align-items: center;
     justify-content: space-around;
     box-shadow:2px 5px 8px #88888833;
-    z-index: 100;
     z-index: 100;
     
     
@@ -105,17 +107,22 @@ nav ul li a:hover:after{
     height:70vh;
     display: block;
     justify-content: space-around;
+    z-index: -100;
     
+}
+.home section.satu::after{
+    background: red;
 }
 .home section.satu::before{
     content: "";
     display: block;
     width:100%;
     height: 100vh;
-    background: url('../image/wave.png') 5% 500% no-repeat;
+    background: url('../image/wave.png') 100% 300% no-repeat;
     position: absolute;
     left:0;
-    opacity: 1;
+    opacity: 100;
+    z-index: 0;
 
 
 }
@@ -157,6 +164,7 @@ div.cover{
 .image1{
     width: 50%;
     height:auto;
+    z-index: 1;
 }
 img{
     width:100%;
@@ -178,6 +186,7 @@ div.cover2{
 
 }
 div.image2{
+    z-index: 1;
     height: 100%;
     width: 50%;
     padding: 2rem 0rem;
@@ -188,6 +197,7 @@ img.gambar2{
 
 }
 div.text2{
+    z-index: 1;
     width:60%;
     color:#242734;
     align-items: center;
@@ -203,6 +213,7 @@ div.text2{
     background: #FD9388;
     display: flex;
     justify-content: space-around;
+    z-index: 10;
     
 }
 .home section.tiga::after{
@@ -213,7 +224,7 @@ div.text2{
     background: url('../image/wave.png') 10% 500% no-repeat;
     position: absolute;
     left:0;
-    z-index: 1;
+    z-index: 0;
     opacity: 1;
 }
 div.cover3{
@@ -225,6 +236,7 @@ div.cover3{
 
 }
 div.image3{
+    z-index: 1;
     height: 100%;
     width: 50%;
     display: flex;
@@ -233,15 +245,17 @@ div.image3{
     z-index: 80;
 }
 img.gambar3{
+    z-index: 1;
     width:auto;
     height:100%;
 
 }
 div.text3{
+    z-index: 1;
     width:60%;
     color: #FEFAFE;
     align-items: center;
-    z-index: 100;
+    z-index: 1;
 }
 .judul3{
     font-size: 2rem;
@@ -269,11 +283,13 @@ div.image4{
     padding: 2rem 0rem;
 }
 img.gambar4{
+    z-index: 1;
     width:auto;
     height:100%;
 
 }
 div.text4{
+    z-index: 1;
     width:60%;
     color:#242734;
     align-items: center;
@@ -299,7 +315,7 @@ footer{
     padding: .5rem;
     background: #242734;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     color: white;
     font-weight: lighter;
     font-size: .8rem;

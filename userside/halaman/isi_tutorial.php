@@ -22,7 +22,7 @@ include("../template/header.php")
                 <?php endwhile; ?>
             </div>
             <div class="right">
-                <h3>Cerita Lain</h3>
+                <h3>Baca cerita</h3>
                 <?php $sql2 = mysqli_query($connect, "SELECT * FROM artikel ORDER BY artikel.id ASC");
                 ?>
                 <?php while ($result = mysqli_fetch_array($sql2)) : ?>
@@ -46,7 +46,7 @@ include("../template/header.php")
     </section>
     <section class="dua">
         <div class="container">
-            <a href="./isi_tutorial.php" class="klik">
+            <a href="./tutorial.php" class="klik">
                 <div class="tombol tombol-satu">Kembali</div>
             </a>
         </div>
