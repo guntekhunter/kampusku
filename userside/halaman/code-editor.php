@@ -9,8 +9,20 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <h1 style="cursor:context-menu">KampusKu</h1>
+            <ul>
+                <li><a class="<?= $current_page == 'index' ? 'aktif' : '' ?>" href="../halaman/index.php">Home</a></li>
+                <li><a class="<?= $current_page == 'artikel' ? 'aktif' : '' ?>" href="../halaman/artikel.php">Artikel</a></li>
+                <li><a class="<?= $current_page == 'tutorial' ? 'aktif' : '' ?>" href="../halaman/tutorial.php">Tutorial</a></li>
+                <li><a class="<?= $current_page == 'codeEditor' ? 'aktif' : '' ?>" href="../halaman/codeEditor.php">Code editor</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="header"> Codeboard Online IDE </div>
+    <div class="gaping"></div>
     <div class="control-panel">
         Select Language:
         &nbsp; &nbsp;
