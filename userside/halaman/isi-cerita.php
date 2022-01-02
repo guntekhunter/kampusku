@@ -57,7 +57,7 @@ include("../template/header.php")
         </div>
     </section>
     <section class="tiga">
-        <div class="container header">
+        <div class="header">
             <h1>Cerita Terbaru</h1>
             <div class="gap"> </div>
             <div class="container-cardnya">
@@ -93,8 +93,5 @@ include("../template/header.php")
             </div>
         </div>
     </section>
-
-
-    </body>
-
-    </html>
+    <div class="gap"></div>
+    <?php include("../template/footer.php") ?>

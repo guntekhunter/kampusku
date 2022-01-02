@@ -14,9 +14,11 @@ class Tutorial extends CI_Controller
         $getBahasa = $this->Tutorial_model->getTutorial();
         $namanya = $this->Tutorial_model->getNama($bahasa);
         $dapatkan = $this->Tutorial_model->getBahasa($bahasa);
+        $id = $this->Tutorial_model->getId($bahasa);
         $data['bahasa'] = $getBahasa;
         $data['coba'] = $namanya;
         $data['dapat'] = $dapatkan;
+        $data['id'] = $id;
 
         $data['tutor'] = $this->db->get('tutorial')->result_array();
         $data['bahasa'] = $this->db->get('tbl_bahasa')->result_array();
@@ -60,6 +62,52 @@ class Tutorial extends CI_Controller
             // $this->db->insert("tbl_bahasa", ["nama" => $this->input->post('nama')], ["gambar" => $this->input->post('gambar')]);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
                 Bahasa baru berhasil ditambahkan</div>');
+            redirect('tutorial');
+        }
+    }
+    public function materi()
+    {
+        $data['title'] = 'Tutorial';
+        $data['user'] = $this->db->get_where('user', ['email' =>
+        $this->session->userdata('email')])->row_array();
+
+        $this->load->model('Tutorial_model');
+        $bahasa = $this->input->post('id');
+        $getBahasa = $this->Tutorial_model->getTutorial();
+        $namanya = $this->Tutorial_model->getNama($bahasa);
+        $dapatkan = $this->Tutorial_model->getBahasa($bahasa);
+        $id = $this->Tutorial_model->getId($bahasa);
+        $data['bahasa'] = $getBahasa;
+        $data['coba'] = $namanya;
+        $data['dapat'] = $dapatkan;
+        $data['id'] = $id;
+
+        $data['tutor'] = $this->db->get('tutorial')->result_array();
+        $data['bahasa'] = $this->db->get('tbl_bahasa')->result_array();
+
+        $data['ommaleka'] = $getBahasa;
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
+
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
+        $this->form_validation->set_rules('url', 'Url', 'required');
+
+
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('templates/topbar', $data);
+            $this->load->view('tutorial/index', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $data = [
+                'id_bahasa' => htmlspecialchars($this->input->post('id', true)),
+                'judul' => htmlspecialchars($this->input->post('nama', true)),
+                'url_video' => htmlspecialchars($this->input->post('url', true)),
+            ];
+            $this->db->insert('tutorial', $data);
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+                    materi baru ditambahkan</div>');
             redirect('tutorial');
         }
     }

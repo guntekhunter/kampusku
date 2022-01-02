@@ -5,12 +5,13 @@
 <section class="artikel">
     <?php include("../template/black-header.php") ?>
     <section class="tiga">
-        <div class="container header">
+        <div class="header">
             <h1>Cerita Hari Ini</h1>
             <div class="gap"> </div>
             <div class="container-cardnya">
                 <div class="cardnya">
-                    <?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel WHERE artikel.id_jenis = 1 ORDER BY artikel.id ASC ");
+                    <?php $id = $_GET['id']; ?>
+                    <?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel WHERE artikel.id_jenis = $id ORDER BY artikel.id ASC ");
                     ?>
                     <?php while ($result = mysqli_fetch_array($sql1)) : ?>
                         <a href="../halaman/isi-cerita.php?id=<?= $result['id']; ?>" class="card-containernya" name="ommaleka">
@@ -39,5 +40,4 @@
     </section>
 
 </section>
-
-</html>
+<?php include("../template/footer.php") ?>

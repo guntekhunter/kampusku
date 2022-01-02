@@ -1,7 +1,7 @@
 <?php $current_page = 'artikel'; ?>
 <?php include("../template/header.php") ?>
 <?php include "../conf/koneksi.php"; ?>
-<section class="artikel">
+<div class="artikel">
 
     <?php include("../template/black-header.php") ?>
     <section class="dua">
@@ -11,19 +11,19 @@
             <div class="gap"></div>
             <div class="gap"></div>
             <div class="card-artikel">
-                <a href="../halaman/cerita.php" class="card cerita">
+                <a href="../halaman/cerita.php?id=1" class="card cerita">
                     <div class="card-container">
                         <h4>Cerita</h4>
                         <img src="../image/home page/3.png" alt="">
                     </div>
                 </a>
-                <a href="../halaman/materi.php" class="card materi">
+                <a href="../halaman/cerita.php?id=2" class="card materi">
                     <div class="card-container">
                         <h4>Materi</h4>
                         <img src="../image/home page/3.png" alt="">
                     </div>
                 </a>
-                <a href="../halaman/konspirasi.php" class="card konspirasi">
+                <a href="../halaman/cerita.php?id=3" class="card konspirasi">
                     <div class="card-container">
                         <h4>Konspirasi</h4>
                         <img src="../image/home page/3.png" alt="">
@@ -33,45 +33,41 @@
         </div>
     </section>
     <section class="tiga">
-        <div class="container header">
+        <div class="header">
             <h1>Sering Dilihat</h1>
             <div class="gap"> </div>
             <div class="container-cardnya">
                 <div class="cardnya">
                     <?php $sql1 = mysqli_query($connect, "SELECT * FROM artikel ORDER BY artikel.id DESC ");
                     ?>
+                    <?php $e = 1; ?>
                     <?php while ($result = mysqli_fetch_array($sql1)) : ?>
-                        <a href="../halaman/isi-cerita.php?id=<?= $result['id']; ?>" class="card-containernya" name="ommaleka">
-                            <div class="image-container">
-                                <?php $g = $result['gambar']; ?>
-                                <img src="../../serverside/gambar/<?= $g; ?>" alt="">
-                            </div>
-                            <div class="text-container">
-                                <h3><?php echo $result['judul']; ?></h3>
-                                <h4><?php $coba = $result['isi'];
-                                    $i = strip_tags($coba);
-                                    if (strlen($i) > 5) :
-                                        $stringCut = substr($i, 0, 100);
-                                        $endPoint = strrpos($stringCut, ' ');
-                                        $i = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-                                    endif;
-                                    echo $i;
-                                    ?></h4>
-                            </div>
-                        </a>
+                        <?php if ($e < 6) : ?>
+                            <a href="../halaman/isi-cerita.php?id=<?= $result['id']; ?>" class="card-containernya" name="ommaleka">
+                                <div class="image-container">
+                                    <?php $g = $result['gambar']; ?>
+                                    <img src="../../serverside/gambar/<?= $g; ?>" alt="">
+                                </div>
+                                <div class="text-container">
+                                    <h3><?php echo $result['judul']; ?></h3>
+                                    <h4><?php $coba = $result['isi'];
+                                        $i = strip_tags($coba);
+                                        if (strlen($i) > 5) :
+                                            $stringCut = substr($i, 0, 100);
+                                            $endPoint = strrpos($stringCut, ' ');
+                                            $i = $endPoint ? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                        endif;
+                                        echo $i;
+                                        ?></h4>
+                                </div>
+                            </a>
+                        <?php endif; ?>
+                        <?php $e++; ?>
                     <?php endwhile; ?>
 
                 </div>
             </div>
         </div>
     </section>
-
-</section>
-
-</body>
-<!-- illustration -->
-<!-- <a href='https://www.freepik.com/vectors/school'>School vector created by stories - www.freepik.com</a> -->
-<!-- <a href='https://www.freepik.com/vectors/people'>People vector created by stories - www.freepik.com</a> -->
-<!-- <a href='https://www.freepik.com/vectors/nature'>Nature vector created by stories - www.freepik.com</a> -->
-
-</html>
+</div>
+<?php include("../template/footer.php") ?>

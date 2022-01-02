@@ -27,4 +27,12 @@ class Tutorial_model extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+    public function getId($bahasa)
+    {
+        $this->db->select('tbl_bahasa.*');
+        $this->db->from('tbl_bahasa');
+        $this->db->where(['tbl_bahasa.id' => $bahasa]);
+        $query = $this->db->get();
+        return $query->result();
+    }
 }

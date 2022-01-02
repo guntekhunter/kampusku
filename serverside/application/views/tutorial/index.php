@@ -7,6 +7,7 @@
     <?= form_error('gambar', '<div class="alert alert-danger" role="alert">
                 ', '</div>') ?>
 
+
     <?= $this->session->flashdata('message'); ?>
     <?= form_open("Tutorial") ?>
     <select name="id">
@@ -86,15 +87,26 @@
                 <!-- Card Content - Collapse -->
                 <div class="collapse show" id="collapseCardExample">
                     <div class="card-body">
+                        <?= form_error('nama', '<div class="alert alert-danger" role="alert">
+                ', '</div>') ?>
+                        <?= form_error('url', '<div class="alert alert-danger" role="alert">
+                ', '</div>') ?>
+                        <?= form_open_multipart('tutorial/materi'); ?>
 
 
                         <div class="form-group">
                             <label for="judul" class="pl-3">Bahasa</label>
                             <div class="col-sm-12 mb-3 mb-sm-0">
                                 <?php if (count($dapat)) : ?>
-                                    <?php foreach ($dapat as $d) : ?>
-                                        <input type="text" name='bahasa' id='bahasa' class="form-control " autocomplete="off" value="<?= $d->nama; ?>">
-                                    <?php endforeach ?>
+                                    <?php if (count($id)) : ?>
+                                        <?php foreach ($dapat as $d) : ?>
+                                            <?php foreach ($id as $i) : ?>
+                                                <input type="hidden" name='id' id='id' class="form-control " autocomplete="off" value="<?= $i->id; ?>">
+                                                <input type="text" class="form-control " autocomplete="off" value="<?= $d->nama; ?>" readonly>
+                                            <?php endforeach ?>
+                                        <?php endforeach ?>
+                                    <?php else : ?>
+                                    <?php endif; ?>
                                 <?php else : ?>
                                 <?php endif; ?>
                             </div>
@@ -103,14 +115,14 @@
                         <div class="form-group">
                             <label for="judul" class="pl-3">Nama materi</label>
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" name='judul' id='judul' class="form-control " autocomplete="off">
+                                <input type="text" name='nama' id='nama' class="form-control " autocomplete="off">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="judul" class="pl-3">Url video</label>
                             <div class="col-sm-12 mb-3 mb-sm-0">
-                                <input type="text" name='judul' id='judul' class="form-control " autocomplete="off">
+                                <input type="text" name='url' id='url' class="form-control " autocomplete="off">
                             </div>
                         </div>
 
@@ -128,38 +140,37 @@
         </div>
 
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="newMenuModal" tabindex="-1" aria-labelledby="newMenuModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newMenuModalLabel">Add New Menu</h5>
+    
+                </div>
+                <?= form_open_multipart('tutorial'); ?>
+                <div class="form-group">
+                    <label for="judul" class="pl-3">Nama bahasa</label>
+                    <div class="col-sm-3 mb-3 mb-sm-0">
+                        <input type="text" name='nama' id='nama' class="form-control " autocomplete="off">
+                    </div>
+                </div>
+    
+                <div class="form-group ml-2">
+                    <label for="judul" class="ml-3">Gambar</label>
+                    <div class="col-sm-3 mb-3 mb-sm-0 p-0">
+                        <input type="file" name='userfile' size='20' id='gambar' class="form-control " autocomplete="off" required="">
+                    </div>
+    
+                    <div class="ml-2 modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+    
+                    </form>
+                </div>
+            </div>
+        </div>
 
 </div>
 
-
-<!-- Modal -->
-<div class="modal fade" id="newMenuModal" tabindex="-1" aria-labelledby="newMenuModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="newMenuModalLabel">Add New Menu</h5>
-
-            </div>
-            <?= form_open_multipart('tutorial'); ?>
-            <div class="form-group">
-                <label for="judul" class="pl-3">Nama bahasa</label>
-                <div class="col-sm-3 mb-3 mb-sm-0">
-                    <input type="text" name='nama' id='nama' class="form-control " autocomplete="off">
-                </div>
-            </div>
-
-            <div class="form-group ml-2">
-                <label for="judul" class="ml-3">Gambar</label>
-                <div class="col-sm-3 mb-3 mb-sm-0 p-0">
-                    <input type="file" name='userfile' size='20' id='gambar' class="form-control " autocomplete="off" required="">
-                </div>
-
-                <div class="ml-2 modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Add</button>
-                </div>
-
-                </form>
-            </div>
-        </div>
-    </div>

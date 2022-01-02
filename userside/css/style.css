@@ -25,10 +25,14 @@ h3{
     width:10rem;
     height: 3rem;
     border-radius: .5rem;
+    padding: 0rem .1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     cursor: pointer;
+}
+.tombol::hover{
+    color: red;
 }
 .gap{
     height:1rem;
@@ -98,18 +102,40 @@ nav ul li a:hover:after{
 /* section satu */
 .home section.satu{
     background: #242734;
+    padding-top: 5rem;
     width:100%;
-    height:80vh;
-    display: flex;
+    height:70vh;
+    display: block;
     justify-content: space-around;
+    z-index: -100;
     
+}
+.home section.satu::after{
+    background: red;
+}
+.home section.satu::before{
+    content: "";
+    display: block;
+    width:100%;
+    height: 100vh;
+    background: url('../image/wave.png') 100% 300% no-repeat;
+    position: absolute;
+    left:0;
+    opacity: 100;
+    z-index: 0;
+
+
+}
+.container-home{
+    display: flex;
+    width: 70%;
 }
 div.cover{
     display: flex;
     align-items: center;
-    width:70%;
+    width:100%;
     height:100%;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 .text1{
@@ -138,10 +164,11 @@ div.cover{
 .image1{
     width: 50%;
     height:auto;
+    z-index: 1;
 }
 img{
     width:100%;
-    height:100%;
+    height:auto;
 }
 
 /* section dua */
@@ -159,6 +186,7 @@ div.cover2{
 
 }
 div.image2{
+    z-index: 1;
     height: 100%;
     width: 50%;
     padding: 2rem 0rem;
@@ -169,6 +197,7 @@ img.gambar2{
 
 }
 div.text2{
+    z-index: 1;
     width:60%;
     color:#242734;
     align-items: center;
@@ -179,11 +208,24 @@ div.text2{
 /* section tiga */
 .home section.tiga{
     width:100%;
-    height:60vh;
+    height:80vh;
+    padding: 2rem 0rem;
     background: #FD9388;
     display: flex;
     justify-content: space-around;
+    z-index: 10;
     
+}
+.home section.tiga::after{
+    content: "";
+    display: block;
+    width:100%;
+    height: 100vh;
+    background: url('../image/wave.png') 10% 500% no-repeat;
+    position: absolute;
+    left:0;
+    z-index: 0;
+    opacity: 1;
 }
 div.cover3{
     align-items: center;
@@ -194,21 +236,26 @@ div.cover3{
 
 }
 div.image3{
+    z-index: 1;
     height: 100%;
     width: 50%;
     display: flex;
     justify-content: right;
     padding: 2rem 0rem;
+    z-index: 80;
 }
 img.gambar3{
+    z-index: 1;
     width:auto;
     height:100%;
 
 }
 div.text3{
+    z-index: 1;
     width:60%;
     color: #FEFAFE;
     align-items: center;
+    z-index: 1;
 }
 .judul3{
     font-size: 2rem;
@@ -236,11 +283,13 @@ div.image4{
     padding: 2rem 0rem;
 }
 img.gambar4{
+    z-index: 1;
     width:auto;
     height:100%;
 
 }
 div.text4{
+    z-index: 1;
     width:60%;
     color:#242734;
     align-items: center;
@@ -261,3 +310,20 @@ section .row .container{
     display: flex;
     justify-content: space-around;
 }
+footer{
+    height: auto;
+    padding: .5rem;
+    background: #242734;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: lighter;
+    font-size: .8rem;
+    margin-top: 2rem;
+    bottom: 0;
+}
+/* position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;
+   background:#6cf; */

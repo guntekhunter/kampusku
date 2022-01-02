@@ -10,24 +10,19 @@ include("../template/header.php")
     <section class="satu">
         <div class="container-section-satu">
             <div class="left">
-                <a href="./video.php">
-                    <div class="card-tutorial">
-                        halo
-                    </div>
-                </a>
-                <a href="./video.php">
-                    <div class="card-tutorial">
-                        halo
-                    </div>
-                </a>
-                <a href="./video.php">
-                    <div class="card-tutorial">
-                        halo
-                    </div>
-                </a>
+                <?php $id = $_GET['id']; ?>
+                <?php $sql1 = mysqli_query($connect, "SELECT * FROM tutorial WHERE tutorial.id_bahasa = $id ORDER BY tutorial.id ASC ");
+                ?>
+                <?php while ($result = mysqli_fetch_array($sql1)) : ?>
+                    <a href="./video.php?id=<?= $result['id']; ?>&bahasa=<?= $result['id_bahasa']; ?>">
+                        <div class="card-tutorial">
+                            <?= $result['judul']; ?>
+                        </div>
+                    </a>
+                <?php endwhile; ?>
             </div>
             <div class="right">
-                <h3>Cerita Lain</h3>
+                <h3>Baca cerita</h3>
                 <?php $sql2 = mysqli_query($connect, "SELECT * FROM artikel ORDER BY artikel.id ASC");
                 ?>
                 <?php while ($result = mysqli_fetch_array($sql2)) : ?>
@@ -51,12 +46,10 @@ include("../template/header.php")
     </section>
     <section class="dua">
         <div class="container">
-            <a href="./artikel.php" class="klik">
-                <div class="tombol tombol-satu">Kembali ke Artikel</div>
+            <a href="./tutorial.php" class="klik">
+                <div class="tombol tombol-satu">Kembali</div>
             </a>
         </div>
     </section>
-
-    </body>
-
-    </html>
+    <div class="gap"></div>
+    <?php include("../template/footer.php") ?>

@@ -56,8 +56,3 @@
 
     </form>
 </div>
-<!-- /.container-fluid -->
-
-</div>
-<!-- End of Main Content -->
-<!-- JOIN jenis_artikel ON artikel.id_jenis = jenis_artikel.id -->

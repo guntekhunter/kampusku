@@ -101,15 +101,23 @@ section.dark-header{
 
 .artikel section.tiga{
     justify-content: space-around;
-    position: relative;
     display: flex;
-    height:70vh;
+    height:auto;
     width: 100%;
     margin: 1rem 0rem;
 }
 .tiga div.container{
     position: absolute;
     padding: 2rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    border-radius: .3rem;
+}
+.header{
+    position: relative;
+    width: 70%;
+    height: 100%;
+    justify-content: space-around;
+    padding: 2rem;
     border: 1px solid rgba(0, 0, 0, 0.205);
     border-radius: .3rem;
 }
@@ -153,4 +161,11 @@ a h3{
 }
 .image-container{
     width: 50%;
+}
+
+/* section empat */
+.artikel section.empat{
+    height: auto;
+    position: absolute;
+    background: red;
 }
